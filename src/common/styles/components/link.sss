@@ -1,0 +1,26 @@
+.link
+  color: var(--color-perfect-blue)
+  border-bottom: 1px dotted var(--color-perfect-blue)
+  transition: text-shadow .1s, color .1s, border-bottom .1s
+
+  &__icon
+    &--right
+      &:before
+        margin: 0 0 0 4px
+
+    &--left
+      &:before
+        margin: 0 4px 0 0
+
+  &:visited
+    color: color(var(--color-perfect-blue) blackness(10%))
+
+  &:hover
+    color: color(var(--color-perfect-blue) shade(25%))
+    border-bottom: 1px dotted color(var(--color-perfect-blue) shade(25%))
+
+  &:focus
+    @mixin soft-text-shadow 1.5, .2
+
+  &--no-underline
+    border-bottom-color: transparent

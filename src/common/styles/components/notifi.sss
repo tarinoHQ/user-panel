@@ -1,0 +1,134 @@
+
+
+.notifi
+  width: 100%
+  padding: 15px 0
+  border-bottom: 1px solid #e5e5e5
+
+  &__left
+    width: auto
+    margin-right: 50px
+
+  &__icon
+    width: 50px
+    padding-left: 7px
+    text-align: left
+    vertical-align: top
+    color: var(--color-perfect-green)
+    float: right
+
+  &__head
+    display: table
+
+    & p
+      margin: 0
+
+    & a
+      font-weight: bold
+      color: rgb(41, 84, 112)
+      border-bottom: 1px dotted transparent
+      transition: color .1s, border .1s
+
+      &:hover
+        color: var(--color-perfect-blue)
+        border-bottom: 1px dotted var(--color-perfect-blue)
+
+  &__title
+    @mixin clearfix
+
+    width: 100%
+    display: table-cell
+    line-height: 1.7
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: -.1px
+    color: #555
+
+  &__date
+    display: table-cell
+    margin: 0 7px 7px 0
+    font-size: 13px
+    color: #bbb
+    vertical-align: top
+    white-space: nowrap
+
+    @media (--small-viewport)
+      font-size: 12px
+
+  &__content
+    display: block
+    padding: 5px 0 0 0
+    line-height: 1.7
+    font-size: 14px
+
+    &__text, & p
+      margin: 0
+
+  &__btn
+    margin: 5px 0 5px 10px
+
+  &__link
+    margin: 5px 0 5px 10px
+
+  // themes
+  &--news
+    & .notifi
+      &__icon
+        color: var(--color-info)
+
+
+  &--invoice
+    & .notifi
+      &__icon
+        color: var(--color-success)
+
+
+  &--gift
+    padding-top: 23px
+    padding-bottom: 23px
+
+    & .notifi
+      &__content
+        color: #ac7b1c
+
+      &__title
+        color: #d18c07
+        font-size: 16px
+
+      &__date
+        color: #e9c57e
+
+      &__left
+        width: auto
+        margin-right: 50px
+
+      &__icon
+        width: 50px
+        color: #FFA000
+        font-size: 30px
+        /*margin-top: -5px*/
+
+      &__image
+        width: 37px
+        margin-left: 2px
+        animation-name: tada
+        animation-duration: 4s
+        animation-delay: 1s
+        animation-iteration-count: infinite
+
+
+@keyframes tada
+  0%
+    transform: scale3d(1, 1, 1)
+
+  5%, 10%
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+
+  15%, 25%, 35%, 45%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+  20%, 30%, 40%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+  50%, 100%
+    transform: scale3d(1, 1, 1)

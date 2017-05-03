@@ -1,0 +1,70 @@
+.search-box
+  position: relative
+  height: var(--srch-box-height)
+  width: var(--srch-box-width)
+  overflow: hidden
+
+  &__button
+    @mixin reset-button
+
+    position: absolute
+    height: var(--srch-box-btn-size)
+    width: var(--srch-box-btn-size)
+    display: block
+    font-size: 18px
+    color: #999
+    cursor: pointer
+    transition: color .1s, background .1s
+
+    &:hover
+      /*color: var(--color-perfect-blue)
+      background: #f9f9f9*/
+
+  &__input-wrapper
+    position: absolute
+    top: 0
+    height: var(--srch-box-height)
+    display: block
+    overflow: hidden
+
+  &__input-label
+    position: absolute
+    width: 100%
+    height: var(--srch-box-height)
+    z-index: 1
+    line-height: var(--srch-box-height)
+    color: #999
+    opacity: 0
+    transition: opacity .1s
+
+  &__input
+    @mixin reset-input
+
+    position: absolute
+    width: 100%
+    display: block
+    z-index: 2
+    height: var(--srch-box-height)
+    background: #f5f5f5
+    background: transparent
+
+  // styles
+  &--btn-left
+    & .search-box__input-wrapper
+      left: var(--srch-box-btn-size)
+      right: 10px
+
+    & .search-box__button
+      left: 0
+
+  &--empty
+    & .search-box__input-label
+      opacity: 1
+
+  &--focused
+    & .search-box__input-label
+      opacity: 0
+
+  &--focused
+    &.search-box--empty .search-box__input-label
+      opacity: 0.5

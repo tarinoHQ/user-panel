@@ -1,0 +1,129 @@
+.more-bubble
+  display: inline
+  position: relative
+
+  &__link
+    @mixin reset-button
+
+    position: relative
+    width: auto
+    height: var(--more-bubble-height)
+    line-height: var(--more-bubble-height)
+    display: inline-block
+    padding: 0 var(--more-bubble-horizental-padding)
+    margin: 2px 5px
+    font-size: 14px
+    color: var(--color-perfect-blue)
+    cursor: pointer
+    transition: opacity .2s
+
+    @media (--medium-viewport), (--small-viewport)
+      margin: 2px 0
+
+    &.is-open,
+    &:hover
+      opacity: 0.85
+
+    &--arrow-down
+      padding-left: calc(var(--more-bubble-horizental-padding) + var(--more-bubble-arrow-size) + 6px)
+
+      &:after
+        content: '\e8e2'
+        position: absolute
+        left: var(--more-bubble-horizental-padding)
+        top: calc((var(--more-bubble-height) - var(--more-bubble-arrow-size)) / 2)
+        width: var(--more-bubble-arrow-size)
+        height: var(--more-bubble-arrow-size)
+        line-height: var(--more-bubble-arrow-size)
+        font-family: 'tpanel'
+        font-size: var(--more-bubble-arrow-size)
+        transition: transform .3s
+
+    &.is-open
+      &:after
+        transform: rotate(180deg)
+
+  &__bubble
+    @mixin bubble-top 50%
+
+    position: absolute
+    left: 50%
+    top: calc(var(--more-bubble-arrow-size) + 25px)
+    z-index: 4
+    height: auto
+    width: auto
+    min-width: var(--more-bubble-bubble-width)
+    margin-left: -calc(var(--more-bubble-bubble-width) / 2)
+    padding: 6px 0
+    font-size: 10px
+    border: 1px solid var(--color-pale-gray)
+    transform-origin: 49.5% -1%;
+
+    @mixin soft-shadow 5, .07
+
+    & ul,
+    & li
+      list-style: none
+
+    & ul
+      margin: 0
+      padding: 0
+
+  &__item
+    width: 100%
+    line-height: 1.2
+    text-align: right
+    padding: var(--more-bubble-item-y-padding) var(--more-bubble-item-x-padding)
+    margin: 0
+    font-size: 1.4em
+    text-align: center
+    white-space: nowrap
+    cursor: pointer
+
+    & a
+      padding-left: 2px
+      display: block
+      text-decoration: none
+      color: #333
+      transition: color .2s
+
+    &--image
+      padding: var(--more-bubble-item-y-padding) var(--more-bubble-item-x-padding)
+      text-align: right
+
+    &--disabled
+      opacity: 0.7
+      cursor: default
+
+    &__image
+      @mixin size 15px
+
+      display: inline-block
+      margin-left: var(--more-bubble-item-x-padding)
+      vertical-align: middle
+
+    &__icon
+      @mixin size 15px
+
+      margin: 0
+      display: inline-block
+      margin-left: var(--more-bubble-item-x-padding)
+      font-size: 1em
+      vertical-align: middle
+      opacity: .8
+
+      &:before
+        margin: 0
+
+    &:hover a
+      color: var(--color-perfect-blue)
+
+
+  &__separator
+    height: 1px
+    width: 100%
+    text-align: right
+    margin: .4em 0
+    font-size: 1.5em
+    background: #e8e8e8
+    cursor: pointer

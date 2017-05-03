@@ -1,0 +1,228 @@
+.select-wrapper
+  width: 100%
+  max-width: var(--sel-width)
+  padding: 3px 0 8px 0
+
+  // Label
+  &__label
+    width: 100%
+    display: table
+    padding: 3px 0 6px 0
+    font-size: 14px
+    font-weight: 600
+    color: #555
+
+    &__start
+      display: table-cell
+      text-align: right
+
+    &__end
+      display: table-cell
+      text-align: left
+
+  // Error
+  &__error
+    width: 100%
+    padding: 0px 0 6px 0
+    font-size: 14px
+    font-weight: 600
+    color: var(--color-perfect-red)
+
+  & .Select
+    &-placeholder
+      margin-top: 0
+
+    &-value
+      margin-left: 0
+
+    &-value-icon
+      padding-bottom: 0px
+      border: none
+
+  // -- styles
+  &--full-width
+    max-width: 100%
+
+  &--small-full-width
+    @media (--small-viewport)
+      max-width: 100% !important
+
+  &--medium-full-width
+    @media (--medium-viewport)
+      max-width: 100% !important
+
+  &--ltr
+    direction: ltr
+
+    & .select-wrapper__label
+      &__start
+        text-align: left
+      &__end
+        text-align: right
+
+    & .Select
+      &-arrow-zone
+        padding-right: 10px
+
+      &-arrow
+        margin-left: -15px
+
+// Override default styles
+.Select.is-disabled > .Select-control:hover
+  box-shadow: none
+
+.Select-control
+  background-color: #fff
+  border-radius: 0
+  border: 1px solid #e5e5e5
+  cursor: default
+  height: var(--sel-height)
+  width: 100%
+  transition: box-shadow .1s
+
+  @mixin soft-shadow 1.2, .1
+
+.Select-control:hover
+  @mixin soft-shadow 2, .1
+
+.is-open > .Select-control
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
+  background: #fff
+  border-color: #b3b3b3 #ccc #d9d9d9
+
+.is-open > .Select-control > .Select-arrow
+  border-color: transparent transparent #999
+  border-width: 0 5px 5px
+
+.is-focused:not(.is-open) > .Select-control
+  border-color: var(--color-perfect-blue)
+
+  @mixin soft-shadow 1.5, .1
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value
+  bottom: 0
+  color: #aaa
+  left: 0
+  line-height: 34px
+  padding-left: 10px
+  padding-right: 10px
+  position: absolute
+  right: 0
+  top: 0
+  max-width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.Select-input > input
+  width: 100%
+  background: none transparent
+  border: 0 none
+  box-shadow: none
+  cursor: default
+  display: inline-block
+  font-family: inherit
+  font-size: inherit
+  margin: 0
+  outline: none
+  line-height: normal
+  /* For IE 8 compatibility */
+  padding: 4px 0 12px
+  /* For IE 8 compatibility */
+  -webkit-appearance: none
+
+.Select-clear-zone
+  width: 17px
+  padding-top: 5px
+
+.Select--multi .Select-clear-zone
+  width: 17px
+
+.Select-arrow-zone
+  cursor: pointer
+  display: table-cell
+  position: relative
+  text-align: center
+  vertical-align: middle
+  padding-top: 3px
+  width: 25px
+  padding-right: 5px
+
+.Select-arrow
+  display: inline-block
+  height: 0
+  width: 0
+  border: none
+  text-align: center
+  padding-left: 15px
+
+  &:before
+    content: '\e8e2'
+    font-family: 'tpanel'
+
+.is-open .Select-arrow,
+.Select-arrow-zone:hover > .Select-arrow
+  border-top-color: #666
+
+.Select--multi .Select-multi-value-wrapper
+  display: inline-block
+
+.Select .Select-aria-only
+  display: inline-block
+  height: 1px
+  width: 1px
+  margin: -1px
+  clip: rect(0, 0, 0, 0)
+  overflow: hidden
+
+.Select-menu-outer
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
+  background-color: #fff
+  border: 1px solid #ccc
+  border-top-color: #e6e6e6
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06)
+  box-sizing: border-box
+  margin-top: -1px
+  max-height: 200px
+  position: absolute
+  top: 100%
+  width: 100%
+  z-index: 1
+  -webkit-overflow-scrolling: touch
+
+.Select-menu
+  max-height: 198px
+  overflow-y: auto
+
+.Select-option
+  box-sizing: border-box
+  background-color: #fff
+  color: #666666
+  cursor: pointer
+  display: block
+  padding: 6px 10px
+  font-size: .9em
+
+.Select-option:last-child
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
+
+.Select-option.is-selected
+  background-color: #f6f6f6
+  /* Fallback color for IE 8 */
+  background-color: rgba(150, 150, 150, 0.05)
+  color: #333
+
+.Select-option.is-focused
+  background-color: var(--color-perfect-blue)
+  color: #fff
+
+.Select--multi.has-value .Select-input
+  margin-right: 5px
+
+.Select--multi .Select-value
+  margin-right: 5px
+  margin-top: 4px

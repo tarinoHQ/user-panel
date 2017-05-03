@@ -1,0 +1,20 @@
+{
+  "name": "tarino-user-panel",
+  "description": "Where tarino users can manage their services and settings.",
+  "main": "index.js",
+  "authors": [
+    "Mohammad Rajabifard (@morajabi)"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "placeholders": "^4.0.1"
+  }
+}

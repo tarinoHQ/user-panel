@@ -1,0 +1,147 @@
+.rich-radio
+  width: 100%
+  height: auto
+  min-height: var(--rch-radio-height)
+  border: 1px solid #e5e5e5
+  transition: background .2s, border .2s, box-shadow .1s
+  cursor: pointer
+  user-select: none
+
+  @mixin soft-shadow 1.8, .1
+
+  &__icon
+    @mixin size var(--rch-radio-ic-width)
+
+    position: relative
+    width: var(--rch-radio-ic-width)
+    float: right
+    padding: 11px
+
+    &__check
+      @mixin size 1px
+
+      position: absolute
+      top: 10%
+      right: 50%
+      border-radius: 50px
+      visibility: hidden
+      transition: all .3s ease-out
+
+      &:before
+        content: ''
+        position: absolute
+        top: 8%
+        right: 34%
+        width: 32%
+        height: 70%
+        transform: rotate(45deg)
+        border-bottom: 2px solid #fff
+        border-right: 2px solid #fff
+
+    &__img
+      @mixin size calc(var(--rch-radio-ic-width) - 22px)
+
+      position: absolute
+      top: 11px
+      right: 11px
+      visibility: visible
+      transition: all .2s ease-out
+
+  &__content
+    width: auto
+    margin-right: 65px
+    padding-left: 15px
+    line-height: var(--rch-radio-height)
+
+    &__aligner
+      display: inline-block
+      height: auto
+      padding: 4px 0 4px 0
+      line-height: 1.4
+      vertical-align: middle
+
+  &__title,
+  &__description
+    transition: color .2s
+
+  &__title
+    font-size: 16px
+    font-weight: 600
+    color: #444
+    transition: color .2s
+
+  &__description
+    font-size: 13px
+    color: #999
+    transition: color .2s
+
+  // states
+  &:hover
+    background: #fafafa
+
+    @mixin soft-shadow 2.3, .18
+
+  // styles
+  &--inline
+    width: auto
+    max-width: 100%
+    display: inline-block
+    margin-left: 13px
+    margin-bottom: 13px
+
+  // --
+  &--disabled
+    cursor: default
+    border: 1px solid #f0f0f0
+    background: #f0f0f0
+    box-shadow: none
+
+    & .rich-radio
+      &__title
+        color: #777
+      &__description
+        color: #a3a3a3
+
+    &:hover
+      background: #f0f0f0
+      box-shadow: none
+
+  // --
+  &--checked
+    border-color: var(--color-perfect-blue)
+    background: var(--color-perfect-blue)
+
+    &:hover
+      background: var(--color-perfect-blue)
+
+    & .rich-radio
+      &__icon
+        &__check
+          @mixin size calc(var(--rch-radio-ic-width) - 22px)
+
+          top: 11px
+          right: 11px
+          visibility: visible
+
+        &__img
+          @mixin size 1px
+
+          top: 10%
+          right: 50%
+          visibility: hidden
+
+      &__title
+        color: #fff
+
+      &__description
+        color: #fff
+        opacity: 0.8
+
+  // --
+  &--no-icon
+    & .rich-radio
+      &__icon
+        display: none
+
+      &__content
+        margin-right: 15px

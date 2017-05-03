@@ -1,0 +1,75 @@
+.theme-price
+  // width: 350px
+  width: 100%
+  height: auto
+  margin-bottom: 20px
+  font-family: IRANSans, IRAN
+  border: 1px solid #ccc
+  background: #f7f7f7
+
+  @mixin soft-shadow 4, .07
+
+  &__top, 
+  &__bottom
+    padding: 16px
+    
+  &__top
+    overflow: hidden
+    border-bottom: 2px dashed #ccc
+    
+  &__bottom
+    overflow: hidden
+
+  // inside top
+  &__label
+    width: auto
+    overflow: hidden
+
+    &__desc
+      margin: 7px 0 0 0
+      padding-left: 3px
+      font-size: 13px
+      letter-spacing: -.2px
+      color: #999
+
+  &__price
+    width: 60px
+    height: 50px
+    padding-top: 3px
+    float: left
+    text-align: left
+
+    &__num
+      font-size: 35px
+      font-weight: 500
+      line-height: 30px
+
+    &__crncy
+      font-size: 15px
+      line-height: 12px
+
+    &__free
+      font-size: 24px
+      color: var(--color-perfect-green)
+
+  // inside bottom
+  &__guarantee
+    position: relative
+    margin-bottom: 15px
+  
+  &__check
+    font-size: 15px
+    color: #444
+
+    &:before
+      content: '\e812'
+      display: inline-block
+      margin-left: 10px
+      font-family: tpanel
+
+  &__support
+    position: absolute
+    top: 3px
+    left: 0
+    height: 70px
+    width: 70px

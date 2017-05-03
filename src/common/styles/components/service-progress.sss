@@ -1,0 +1,59 @@
+.service-progress
+  position: relative
+  width: 100%
+  cursor: pointer
+
+  &__bubble
+    @mixin bubble-top 50%, 7px
+    @mixin card-view
+
+    position: absolute
+    top: 100%
+    right: 50%
+    width: auto
+    min-width: 170px
+    padding: 5px 15px
+    margin-right: -75px
+    transform-origin: 50% 0%;
+    text-align: right
+
+  &__task
+    width: 100%
+    min-height: 28px
+    padding: 2px 0
+    text-align: right
+    display: block
+    white-space: nowrap
+
+    &--done
+      color: var(--color-success)
+
+    &__icon
+      width: 20px
+      display: inline-block
+      margin-left: 3px
+      text-align: right
+      
+      & [class^='icon-']:before
+        width: auto
+        margin: 0
+
+    &__pending
+      width: 10px
+      height: 10px
+      display: inline-block
+      border-radius: 10px
+      background: color(var(--color-info) lightness(55%))
+      animation-duration: 4s
+      animation-iteration-count: infinite
+      animation-name: beep
+
+  // &__task:nth-child(2)
+  //   &__pending
+  //     animation-delay: .5s
+
+  // &__task:nth-child(3)&__pending
+  //   animation-delay: 1s
+
+  // &__task:nth-child(4)&__pending
+  //   animation-delay: 1.5s

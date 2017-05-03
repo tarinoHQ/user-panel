@@ -1,0 +1,49 @@
+.huge-button
+  @mixin reset-button
+
+  position: relative
+  width: 350px // for demo
+  height: 80px // for demo
+  line-height: 80px // for demo
+  display: block
+  font-family: IRANSans
+  font-size: 16px
+  border-radius: 5px
+  text-align: center
+  cursor: pointer
+  background: var(--color-modren-red)
+  color: #fff
+
+  @mixin soft-shadow 2.6, .2
+
+  &--red
+    background: var(--color-modren-red)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-modren-red) shade(8%))
+    &:active
+      background: color(var(--color-modren-red) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &--blue
+    background: var(--color-modren-blue)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-modren-blue) shade(8%))
+    &:active
+      background: color(var(--color-modren-blue) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &__icon
+    position: absolute
+    right: 0
+    top: 50%
+    height: 30px
+    line-height: 30px
+    margin-top: -15px
+    padding-right: 15px
+    color: #fff
+
+  &__text
+    line-height: 25px
+    font-size: 16px

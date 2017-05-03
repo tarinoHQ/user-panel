@@ -1,0 +1,103 @@
+.nav-item
+  position: relative
+
+  &__link
+    @mixin reset-button
+
+    position: relative
+    width: auto
+    height: var(--nav-item-height)
+    line-height: var(--nav-item-height)
+    display: inline-block
+    padding: 0 var(--nav-item-horizental-padding)
+    margin: 2px 5px
+    font-size: 14px
+    color: #fff
+    cursor: pointer
+    transition: opacity .2s
+
+    @media (--medium-viewport), (--small-viewport)
+      margin: 2px 0
+
+    &.is-open,
+    &:hover
+      opacity: 0.85
+
+    &--active
+      border-radius: 3px
+      background: rgba(255, 255, 255, 0.1)
+
+    &--arrow-down
+      padding-left: calc(var(--nav-item-horizental-padding) + var(--nav-item-arrow-size) + 6px)
+
+      &:after
+        content: '\e8e2'
+        position: absolute
+        left: var(--nav-item-horizental-padding)
+        top: calc((var(--nav-item-height) - var(--nav-item-arrow-size)) / 2)
+        width: var(--nav-item-arrow-size)
+        height: var(--nav-item-arrow-size)
+        line-height: var(--nav-item-arrow-size)
+        font-family: 'tpanel'
+        font-size: var(--nav-item-arrow-size)
+        transition: transform .3s
+
+    &.is-open
+      &:after
+        transform: rotate(180deg)
+
+  &__bubble
+    @mixin bubble-top 50%
+
+    position: absolute
+    left: 50%
+    top: calc(var(--nav-item-arrow-size) + 30px)
+    z-index: 4
+    height: auto
+    min-width: var(--nav-item-bubble-width)
+    margin-left: -calc(var(--nav-item-bubble-width) / 2)
+    padding: 6px 0
+    font-size: 10px
+    transform-origin: 49.5% -1%;
+
+    @mixin card-view
+
+    & ul,
+    & li
+      list-style: none
+
+    & ul
+      margin: 0
+      padding: 0
+
+    &__item
+      position: relative
+      width: 100%;
+      text-align: right
+      padding: var(--nav-subitem-vertical-padding) var(--nav-subitem-horizental-padding)
+      margin: 0
+      font-size: 1.4em
+      line-height: 1.2
+      text-align: center
+      cursor: pointer
+      transition: background .2s
+
+      & a
+        display: block
+        text-decoration: none
+        color: #333
+
+      &:hover
+        background: color(var(--color-bright-gray))
+
+      & a.is-active
+        color: var(--color-perfect-blue)
+
+    &__separator
+      height: 1px
+      width: 100%
+      text-align: right
+      margin: .4em 0
+      font-size: 1.5em
+      background: #e8e8e8
+      cursor: pointer

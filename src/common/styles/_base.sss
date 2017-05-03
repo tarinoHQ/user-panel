@@ -1,0 +1,58 @@
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+a
+  text-decoration: none
+
+html,
+body
+  height: 100%
+  margin: 0
+  padding: 0
+  font-family: IRAN, Cairo, sans-serif
+  line-height: 1.6
+  direction: rtl
+
+body
+  background-color: #2C3A49
+
+  @mixin gredient #2C3A49, #5C6A79
+
+  background-attachment: fixed
+
+  @media print
+    background: #fff
+    color: #000
+
+h1,
+h2,
+h3,
+h4
+  font-family: IRANSans
+  color: #444
+
+button::-moz-focus-inner,
+input::-moz-focus-inner
+  border: 0
+  padding: 0
+
+#nprogress .spinner
+  right: auto
+  left: 15px
+
+[class*="hint--"]:after
+  font-family: 'IRAN'
+  display: inline-block
+  font-size: 13px
+  line-height: 1.6
+  border-radius: 2px
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3)
+
+
+[style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; padding: 20px; background-color: rgb(187, 49, 49); color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased;"]
+  direction: ltr
+
+.clearfix
+  clear: both

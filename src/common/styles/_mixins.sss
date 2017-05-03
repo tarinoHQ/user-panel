@@ -1,0 +1,154 @@
+@define-mixin clearfix
+  &:after, &:before
+    content: " "
+    height: 0
+    display: block
+    visibility: hidden
+    font-size: 0
+
+  &:after
+    clear: both
+
+@define-mixin gredient $start-color, $end-color
+  background: $start-color
+  background: -moz-linear-gradient(45deg, $start-color 0%, $end-color 100%)
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, $start-color), color-stop(100%, $end-color))
+  background: -webkit-linear-gradient(45deg, $start-color 0%, $end-color 100%)
+  background: -o-linear-gradient(45deg, $start-color 0%, $end-color 100%)
+  background: -ms-linear-gradient(45deg, $start-color 0%, $end-color 100%)
+  background: linear-gradient(45deg, $start-color 0%, $end-color 100%)
+
+@define-mixin vertical-gredient $start-color, $end-color
+  background: $start-color
+  background: -moz-linear-gradient(0deg, $start-color 0%, $end-color 100%)
+  background: -webkit-gradient(bottom, top, color-stop(0%, $start-color), color-stop(100%, $end-color))
+  background: -webkit-linear-gradient(0deg, $start-color 0%, $end-color 100%)
+  background: -o-linear-gradient(0deg, $start-color 0%, $end-color 100%)
+  background: -ms-linear-gradient(0deg, $start-color 0%, $end-color 100%)
+  background: linear-gradient(0deg, $start-color 0%, $end-color 100%)
+
+@define-mixin horizental-gredient $start-color, $end-color
+  background: $start-color
+  background: -moz-linear-gradient(90deg, $start-color 0%, $end-color 100%)
+  background: -webkit-gradient(left, right, color-stop(0%, $start-color), color-stop(100%, $end-color))
+  background: -webkit-linear-gradient(90deg, $start-color 0%, $end-color 100%)
+  background: -o-linear-gradient(90deg, $start-color 0%, $end-color 100%)
+  background: -ms-linear-gradient(90deg, $start-color 0%, $end-color 100%)
+  background: linear-gradient(90deg, $start-color 0%, $end-color 100%)
+
+@define-mixin soft-shadow $amount, $opacity: 0.5
+  box-shadow: 0 calc($amount*.7px) calc($amount*2px) rgba(0, 0, 0, $opacity)
+
+@define-mixin soft-text-shadow $amount, $opacity: 0.5
+  text-shadow: 0 calc($amount*.7px) calc($amount*2px) rgba(0, 0, 0, $opacity)
+
+@define-mixin colored-shadow $amount, $color
+  box-shadow: 0 calc($amount*.9px) calc($amount*2px) $color
+
+@define-mixin reset-button
+  background: none
+  color: inherit
+  border: none
+  outline: none
+  appearance: none
+
+@define-mixin reset-input
+  background: none
+  border: none
+  outline: none
+  -webkit-appearance: none
+
+@define-mixin en-font
+  font-family: 'Cairo', 'IRAN', sans-serif
+
+@define-mixin card-view $amount: 2.5, $opacity: 0.1
+  border: 1px solid #e5e5e5
+  @mixin soft-shadow $amount, $opacity
+
+@define-mixin bubble $triangle-size: 7px
+  // important props: top, left
+  position: absolute
+  min-width: 20px
+  height: auto
+  z-index: 3
+  border-radius: 5px
+  background: #fff
+  &:before
+    content: ''
+    position: absolute
+    z-index: 2
+  &:after
+    content: ''
+    position: absolute
+
+@define-mixin bubble-top $x: 50%, $triangle-size: 7px
+  @mixin bubble $triangle-size
+  &:before
+    border-left: $triangle-size solid transparent
+    border-right: $triangle-size solid transparent
+    border-bottom: $triangle-size solid #fff
+    left: $x
+    margin-left: -$triangle-size
+    top: -7px
+  &:after
+    border-left: calc($triangle-size + 2px) solid transparent
+    border-right: calc($triangle-size + 2px) solid transparent
+    border-bottom: calc($triangle-size + 2px) solid #e5e5e5
+    left: $x
+    margin-left: calc(-1 * ($triangle-size + 2px))
+    top: -9px
+
+@define-mixin bubble-bottom $x: 50%, $triangle-size: 7px
+  @mixin bubble $triangle-size
+  &:before
+    border-left: $triangle-size solid transparent
+    border-right: $triangle-size solid transparent
+    border-top: $triangle-size solid #fff
+    left: $x
+    margin-left: -$triangle-size
+    bottom: -7px
+  &:after
+    border-left: calc($triangle-size + 2px) solid transparent
+    border-right: calc($triangle-size + 2px) solid transparent
+    border-top: calc($triangle-size + 2px) solid #e5e5e5
+    left: $x
+    margin-left: calc(-1 * ($triangle-size + 2px))
+    bottom: -9px
+
+@define-mixin bubble-right $x: 50%, $triangle-size: 7px
+  @mixin bubble $triangle-size
+  &:before
+    border-top: $triangle-size solid transparent
+    border-bottom: $triangle-size solid transparent
+    border-left: $triangle-size solid #fff
+    top: $x
+    margin-top: -$triangle-size
+    right: -7px
+  &:after
+    border-top: calc($triangle-size + 2px) solid transparent
+    border-bottom: calc($triangle-size + 2px) solid transparent
+    border-left: calc($triangle-size + 2px) solid #e5e5e5
+    top: $x
+    margin-top: calc(-1 * ($triangle-size + 2px))
+    right: -9px
+
+@define-mixin bubble-left $x: 50%, $triangle-size: 7px
+  @mixin bubble $triangle-size
+  &:before
+    border-top: $triangle-size solid transparent
+    border-bottom: $triangle-size solid transparent
+    border-right: $triangle-size solid #fff
+    top: $x
+    margin-top: -$triangle-size
+    left: -7px
+  &:after
+    border-top: calc($triangle-size + 2px) solid transparent
+    border-bottom: calc($triangle-size + 2px) solid transparent
+    border-right: calc($triangle-size + 2px) solid #e5e5e5
+    top: $x
+    margin-top: calc(-1 * ($triangle-size + 2px))
+    left: -9px
+
+@define-mixin size $size
+  width: $size
+  height: $size

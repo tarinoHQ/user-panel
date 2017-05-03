@@ -1,0 +1,92 @@
+.progress-bar
+  width: 100%
+  max-width: var(--prgbr-width)
+  padding-top: 7px
+  display: inline-block
+
+  &__label
+    display: block
+    font-family: IRANSans
+    font-size: 14px
+    margin-bottom: 4px
+    // text-align: left
+    color: color(var(--color-info) lightness(40%))
+
+    @mixin soft-text-shadow 1, .1
+
+  &__bar
+    @mixin clearfix
+
+    width: 100%
+    overflow: hidden
+    text-align: left
+    border-radius: 10px
+    background: #f0f0f0
+
+    &__progress
+      width: 50%
+      float: left
+      border-radius: 0px 10px 10px 0px
+      transition: width .1s
+
+  // --
+  &--full-width
+    width: 100%
+
+  // Themes
+  &--success
+    & .progress-bar
+      &__label
+        color: color(var(--color-success) lightness(40%))
+      &__bar
+        &__progress
+          @mixin gredient color(var(--color-success) lightness(47%)), var(--color-success)
+
+  // --
+  &--info
+    & .progress-bar
+      &__label
+        color: color(var(--color-info) lightness(40%))
+      &__bar
+        &__progress
+          @mixin gredient color(var(--color-info) lightness(47%)), var(--color-info)
+
+  // --
+  &--warning
+    & .progress-bar
+      &__label
+        color: color(var(--color-warning) lightness(40%))
+      &__bar
+        &__progress
+          @mixin gredient color(var(--color-warning) lightness(47%)), var(--color-warning)
+
+  // --
+  &--danger
+    & .progress-bar
+      &__label
+        color: color(var(--color-danger) lightness(40%))
+      &__bar
+        &__progress
+          @mixin gredient color(var(--color-danger) lightness(47%)), var(--color-danger)
+
+  // --
+  &--normal
+    & .progress-bar
+      &__bar
+        height: var(--prgbr-height-normal)
+        &__progress
+          height: var(--prgbr-height-normal)
+
+  &--slim
+    & .progress-bar
+      &__bar
+        height: var(--prgbr-height-slim)
+        &__progress
+          height: var(--prgbr-height-slim)
+
+  &--thick
+    & .progress-bar
+      &__bar
+        height: var(--prgbr-height-thick)
+        &__progress
+          height: var(--prgbr-height-thick)

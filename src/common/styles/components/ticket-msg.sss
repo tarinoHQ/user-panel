@@ -1,0 +1,201 @@
+.ticket-msg
+  position: relative
+  width: auto
+  max-width: 80%
+  min-width: 500px
+  display: inline-block
+  text-align: right
+  color: #fff
+
+  @media (--small-viewport)
+    max-width: 100%
+    min-width: 100%
+
+  // Inside Bubble
+  &__bubble
+    position: relative
+    width: 100%
+    display: block
+    z-index: 2
+    border-radius: 10px
+    background: #888
+
+    &:before
+      content: ''
+      position: absolute
+      width: 10px
+      height: 10px
+      z-index: 2
+      /*border-top: 5px solid #888
+      border-right: 5px solid #888
+      border-bottom: 5px solid transparent
+      border-left: 5px solid transparent*/
+      top: calc(var(--tmsg-pic-size) / 2.5)
+      transform: rotate(45deg)
+
+  &__header
+    @mixin clearfix
+
+    width: 100%
+    padding: 10px 15px
+
+  &__profile
+    @mixin clearfix
+
+    float: right
+
+    &__pic
+      position: absolute
+      top: 0
+      width: var(--tmsg-pic-size)
+      height: var(--tmsg-pic-size)
+      border-radius: calc(var(--tmsg-pic-size) / 2)
+      background: #eee
+
+    &__info
+      margin-right: 0
+
+    &__name
+      margin-bottom: 3px
+      font-size: 15px
+      font-weight: 600
+      opacity: 0.9
+
+    &__role
+      font-size: 13px
+      opacity: 0.65
+
+  &__date
+    margin-top: 5px
+    font-size: 14px
+    float: left
+    opacity: 0.9
+
+    &:hover
+      opacity: 1
+
+  &__content
+    padding: 5px 15px 15px 15px
+
+  &__attachments
+    width: auto
+    display: inline-block
+    margin: 10px 0 0 0
+    padding: 10px 15px 15px 15px
+    border-radius: 5px
+    background: rgba(255, 255, 255, 0.2)
+
+    & ul
+      margin: 10px 0 0 0
+      padding: 0
+
+    & li
+      list-style: none
+      padding: 0 23px 0 0
+
+  &__attachments__title
+    font-size: 13px
+    font-weight: 600
+    opacity: 0.8
+
+  &__attachments__item
+    position: relative
+    margin-top: 4px
+    font-family: Cairo, sans-serif
+    font-size: 14px
+    letter-spacing: .5px
+    cursor: pointer
+
+    & a
+      color: inherit
+
+    &:before
+      content: '\e82c'
+      position: absolute
+      right: 0
+      top: 0
+      width: 20px
+      height: 20px
+      line-height: 20px
+      text-align: center
+      font-family: 'tpanel'
+      font-size: .95em
+      opacity: .8
+
+    &:hover
+      text-decoration: underline
+
+    &--image:before
+      content: '\e810'
+
+    &--video:before
+      content: '\e80c'
+
+    &--audio:before
+      content: '\e802'
+
+    &--folder:before
+      content: '\e848'
+
+  &__footer
+    text-align: left
+    font-size: 13px
+    opacity: 0.5
+    color: #333
+    transition: opacity .2s
+
+    &:hover
+      opacity: 1
+
+  // -- styles
+  &--user
+    padding-right: calc(var(--tmsg-pic-size) + 15px)
+    color: #fff
+
+    & .ticket-msg
+      &__profile__pic
+        right: -calc(var(--tmsg-pic-size) + 15px)
+
+      &__bubble
+        @mixin vertical-gredient #4E9EFD, #51A6FD
+
+        &:before
+          width: 10px
+          height: 10px
+          border-top: 5px solid #51A6FD
+          border-right: 5px solid #51A6FD
+          border-bottom: 5px solid transparent
+          border-left: 5px solid transparent
+          right: -5px
+          top: calc(var(--tmsg-pic-size) / 2.5)
+          transform: rotate(45deg)
+
+  &--tarino
+    padding-left: calc(var(--tmsg-pic-size) + 15px)
+    color: #333
+
+    & .ticket-msg
+      &__date
+        float: right
+
+      &__profile
+        float: left
+        text-align: left
+
+      &__profile__pic
+        left: -calc(var(--tmsg-pic-size) + 15px)
+
+      &__bubble
+        @mixin vertical-gredient #E3E3E8, #E5E5EA
+
+        &:before
+          width: 10px
+          height: 10px
+          border-top: 5px solid transparent
+          border-right: 5px solid transparent
+          border-bottom: 5px solid #E5E5EA
+          border-left: 5px solid #E5E5EA
+          right: auto
+          left: -5px
+          top: calc(var(--tmsg-pic-size) / 2.5)
+          transform: rotate(45deg)

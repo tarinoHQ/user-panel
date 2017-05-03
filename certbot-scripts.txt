@@ -1,0 +1,10 @@
+./certbot-auto certonly --webroot 
+-w /home/tarin0user/public_html -d tarino.ir -d www.tarino.ir 
+-w /home/tarin0user/public_html/api/Public -d api.tarino.ir -d m.tarino.ir
+-w /home/blogtarin0/public_html -d blog.tarino.ir
+-w /tarino/panel/dist -d panel.tarino.ir
+
+./certbot-auto certonly --webroot -w /home/tarin0user/public_html -d tarino.ir -d www.tarino.ir  -w /home/tarin0user/public_html/api/Public -d api.tarino.ir -d m.tarino.ir -w /home/blogtarin0/public_html -d blog.tarino.ir -w /tarino/panel/dist -d panel.tarino.ir
+./certbot-auto certonly --webroot -w /home/tarin0user/public_html/api/Public -d api.tarino.ir -d m.tarino.ir
+
+./certbot-auto certonly --webroot -w /home/tarin0user/public_html -d tarino.ir -d www.tarino.ir  -w /home/tarin0user/public_html/api/Public -d api.tarino.ir -d m.tarino.ir -w /home/blogtarin0/public_html -d blog.tarino.ir -w /tarino/panel/dist -d panel.tarino.ir

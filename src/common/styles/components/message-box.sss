@@ -1,0 +1,66 @@
+.message-box
+  width: 100%
+  max-width: 100%
+  padding: 15px 15px
+  line-height: 1.8
+  border: 1px solid var(--color-pale-gray)
+
+  @mixin soft-shadow 2, .1
+
+  &__title
+    display: inline-block
+    font-weight: bold
+    user-select: none
+    cursor: default
+
+    &__icon
+      margin-left: 7px
+      font-family: 'tpanel'
+
+  &__msg
+    margin: 10px 0 0 0
+
+  // -- styles
+
+  &--blink
+    & .message-box
+      &__title
+        animation-duration: 7s
+        animation-iteration-count: infinite
+        animation-name: flash
+
+  &--single-line
+    & .message-box
+      &__title
+        display: inline
+
+      &__msg
+        display: inline
+        margin-right: 10px
+
+  &--success
+    & .message-box
+      &__title
+        color: var(--color-success)
+
+  &--info
+    & .message-box
+      &__title
+        color: var(--color-info)
+
+  &--warning
+    & .message-box
+      &__title
+        color: var(--color-warning)
+
+  &--danger
+    & .message-box
+      &__title
+        color: var(--color-danger)
+
+@keyframes flash
+  0%, 8%, 16%, 100%
+    opacity: 1
+
+  4%, 12%
+    opacity: 0

@@ -1,0 +1,24 @@
+.theme-info
+  // width: 350px
+  width: 100%
+  height: auto
+  padding: 10px 14px
+  margin-bottom: 20px
+  font-family: IRANSans, IRAN
+  font-size: 15px
+  border: 1px solid #ddd
+  background: #fff
+
+  @mixin soft-shadow 4, .05
+
+  & td:first-child
+    font-weight: bold
+
+  &__bool
+    &--true
+      font-weight: bold
+      color: var(--color-perfect-green)
+
+    &--false
+      font-weight: bold
+      color: var(--color-perfect-red)

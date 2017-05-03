@@ -1,0 +1,146 @@
+.new-service
+  &__section
+    position: relative
+    padding: 10px 45px 40px 25px
+    border-bottom: 1px solid #e5e5e5
+
+    @media (--small-viewport) 
+      padding-right: 25px
+
+    &:nth-child(2n+1)
+      background: #f9f9f9
+
+    & .section-title
+      margin-right: 20px
+
+    &__bar
+      position: absolute
+      top: 0
+      right: 0
+      bottom: -1px
+      left: 0
+      width: 30px
+      height: auto
+      padding-top: 42px
+      padding-right: 2px
+      font-family: IRANSans
+      font-weight: 100
+      font-size: 16px
+      text-align: center
+      color: #fff
+      background: #43cea2
+
+      @media (--small-viewport) 
+        width: 3px
+
+      &__title
+        position: relative
+        z-index: 2
+        transform: rotate(-90deg)
+        white-space: nowrap
+
+        @media (--small-viewport) 
+          display: none
+
+      &:after
+        content: ''
+        position: absolute
+        top: 40px
+        right: 27px
+        z-index: 1
+        border-top: 15px solid transparent
+        border-right: 15px solid #43cea2
+        border-bottom: 15px solid #43cea2
+        border-left: 15px solid transparent
+
+        @media (--small-viewport) 
+          right: 0
+
+    // colors
+    &--domain
+      ^&__bar
+        background: #43cea2
+        &:after
+          border-right-color: #43cea2
+          border-bottom-color: #43cea2
+    
+    &--host
+      ^&__bar
+        background: #20a7ff
+        &:after
+          border-right-color: #20a7ff
+          border-bottom-color: #20a7ff
+
+    &--cms
+      ^&__bar
+        background: #6E48AA
+        &:after
+          border-right-color: #6E48AA
+          border-bottom-color: #6E48AA
+
+    &--addons
+      ^&__bar
+        background: #34495e
+        &:after
+          border-right-color: #34495e
+          border-bottom-color: #34495e
+
+  &__total
+    position: absolute
+    left: 0
+    width: 100%
+    max-width: 220px
+    padding: 10px
+    text-align: center
+    font-size: 22px
+    font-weight: bold
+    transition: opacity .2s
+    background: #fff
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, .1)
+    opacity: .5
+
+    &:hover
+      opacity: 1
+
+    &__label
+      display: block
+      margin-right: 5px
+      font-size: 13px
+      font-weight: bold
+      line-height: 20px
+      color: #a511b7
+
+    &__curr
+      margin-right: 5px
+      font-size: 15px
+      font-weight: normal
+      line-height: 15px
+
+  &__plans
+    padding: 10px 0
+
+    &__cell
+      width: 25%
+      float: right
+      padding-left: 15px
+
+      @media (--medium-viewport)
+        width: 50%
+        padding-bottom: 15px
+
+      @media (--small-viewport)
+        width: 100%
+        padding-left: 0
+        padding-bottom: 15px
+
+  // server location
+  &__loc
+    text-align: right
+    padding: 10px 0
+
+    &__label
+      display: block
+      margin-bottom: 10px
+
+    &__switch
+      display: inline-block

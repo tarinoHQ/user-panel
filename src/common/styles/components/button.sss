@@ -1,0 +1,183 @@
+.button
+  @mixin reset-button
+
+  position: relative
+  width: auto
+  height: auto
+  display: inline-block
+  padding: var(--btn-vertical-padding) var(--btn-horizental-padding)
+  border-radius: 2px
+  line-height: var(--btn-text-height)
+  font-family: IRAN
+  font-size: calc(var(--btn-text-height) - 3px)
+  font-weight: 600
+  white-space: nowrap
+  cursor: pointer
+  user-select: none
+  transition: background .2s, color .1s, box-shadow .1s
+
+  @mixin soft-shadow 1.5, .15
+
+  &__loading
+    width: 100%
+    & .sk-wave
+      margin: 0
+      height: 20px
+      & .sk-rect
+        margin-left: 1px
+        background: #fff
+
+  .no-cssanimations &_loading
+    display: none
+
+    &:after,
+    &::after
+      content: 'در حال بارگذاری'
+      display: block
+
+  &__txt
+    display: inline-block
+    vertical-align: middle
+    margin-top: -1px
+
+  &__icon
+    position: absolute
+    top: calc(var(--btn-vertical-padding) + (var(--btn-text-height) - var(--btn-icon-size)) / 1.5)
+    width: var(--btn-icon-size)
+    height: var(--btn-icon-size)
+    display: block
+    line-height: var(--btn-icon-size)
+    text-align: center
+    font-size: calc(var(--btn-icon-size) - 1px)
+
+    &:before
+      margin: 0
+
+  // states
+  &:hover
+    @mixin soft-shadow 2, .25
+
+  // styles
+  // - themes
+  &--success
+    background: var(--color-success)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-success) shade(8%))
+    &:active
+      background: color(var(--color-success) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &--danger
+    background: var(--color-danger)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-danger) shade(8%))
+    &:active
+      background: color(var(--color-danger) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &--warning
+    background: var(--color-warning)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-warning) shade(8%))
+    &:active
+      background: color(var(--color-warning) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &--info
+    background: var(--color-info)
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(var(--color-info) shade(8%))
+    &:active
+      background: color(var(--color-info) shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  // - no background
+  &--no-bg
+    background: #f9f9f9
+    box-shadow: none
+    font-weight: bold
+
+    &:hover
+      background: #f7f7f7
+      box-shadow: none
+
+    &:active
+      background: #f0f0f0
+      box-shadow: none
+
+    &.button--success
+      color: var(--color-success)
+      &:active
+        color: color(var(--color-success) shade(9%))
+
+    &.button--danger
+      color: var(--color-danger)
+      &:active
+        color: color(var(--color-danger) shade(9%))
+
+    &.button--warning
+      color: var(--color-warning)
+      &:active
+        color: color(var(--color-warning) shade(9%))
+
+    &.button--info
+      color: var(--color-info)
+      &:active
+        color: color(var(--color-info) shade(9%))
+
+  // - icons
+  &--icon-right
+    padding-right: calc(var(--btn-icon-size) + var(--btn-icon-margin) * 2)
+    ^&__icon
+      right: calc(var(--btn-icon-margin) + 2px)
+
+  &--icon-left
+    padding-left: calc(var(--btn-icon-size) + var(--btn-icon-margin) * 2)
+    ^&__icon
+      left: calc(var(--btn-icon-margin) + 2px)
+
+  // --
+  &--disabled
+    opacity: 0.9
+    background: #f0f0f0
+    color: #aaa
+    box-shadow: none
+    cursor: default
+    padding: var(--btn-vertical-padding) var(--btn-horizental-padding)
+
+    &:hover,
+    &:active
+      background: #f0f0f0
+      color: #aaa
+      box-shadow: none
+
+    ^&__icon
+      display: none
+
+  // - sizes
+  &--small
+    padding: var(--btn-small-vertical-padding) var(--btn-small-horizental-padding)
+    line-height: var(--btn-small-text-height)
+    font-size: calc(var(--btn-small-text-height) - 3px)
+
+    ^&__icon
+      top: calc(var(--btn-small-vertical-padding) + (var(--btn-small-text-height) - var(--btn-small-icon-size)) / 1.5)
+      width: var(--btn-small-icon-size)
+      height: var(--btn-small-icon-size)
+      line-height: var(--btn-small-icon-size)
+      font-size: calc(var(--btn-small-icon-size) - 1px)
+
+    // sizes
+    &^&--icon-right
+      padding-right: calc(var(--btn-small-icon-size) + var(--btn-small-icon-margin) * 2)
+      ^^&__icon
+        right: calc(var(--btn-small-icon-margin) + 2px)
+
+    &^&--icon-left
+      padding-left: calc(var(--btn-small-icon-size) + var(--btn-small-icon-margin) * 2)
+      ^^&__icon
+        left: calc(var(--btn-small-icon-margin) + 2px)

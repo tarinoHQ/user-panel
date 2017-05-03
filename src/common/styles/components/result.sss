@@ -1,0 +1,34 @@
+.result
+  padding-top: 30px
+  text-align: center
+
+  &__image
+    max-width: 215px
+    margin-bottom: 50px
+
+  &__title
+    margin: 0
+    font-size: 1.8em
+    font-weight: 500
+
+  &__message
+    margin: 5px 0 0 0
+
+  &__actions
+    margin-top: 25px
+
+  &__cta
+    margin-left: 10px
+
+    &:last-child
+      margin: 0
+
+  // - states
+  &--ok
+    & .result
+
+      &__title
+        color: var(--color-success)
+
+      &__message
+        color: #555

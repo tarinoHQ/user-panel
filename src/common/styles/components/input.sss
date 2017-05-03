@@ -1,0 +1,189 @@
+.input
+  width: 100%
+  max-width: var(--inp-width)
+  padding: 3px 0 8px 0
+
+  // Label
+  &__label
+    width: 100%
+    display: table
+    padding: 3px 0 6px 0
+    font-size: 14px
+    font-weight: 600
+    color: #555
+
+    &__start
+      display: table-cell
+      text-align: right
+
+    &__end
+      display: table-cell
+      text-align: left
+
+  // Error
+  &__error
+    width: 100%
+    padding: 0px 0 6px 0
+    font-size: 14px
+    font-weight: 600
+    color: var(--color-warning)
+
+  // Textbox
+  &__textbox
+    width: 100%
+    height: auto
+    display: table
+    transition: box-shadow .2s, background .2s
+    border: 1px solid var(--color-pale-gray)
+    background: #fff
+
+    @mixin soft-shadow 1.5, .1
+
+  &__input-wrapper,
+  &__prefix,
+  &__suffix,
+  &__start-icons,
+  &__end-icons
+    height: var(--inp-textbox-height)
+    display: table-cell
+    vertical-align: middle
+    white-space: nowrap
+
+  &__input-wrapper
+    position: relative
+    width: 100%
+
+  &__input
+    @mixin reset-input
+
+    height: var(--inp-textbox-height)
+    line-height: normal
+    line-height: var(--inp-textbox-height)\0/;
+    width: 100%
+    display: block
+    padding: 0 7px
+
+    &::placeholder
+      color: #aaa
+
+    &--ltr
+      direction: ltr
+      text-align: left
+
+    &--rtl
+      direction: rtl
+      text-align: right
+
+  &__textarea
+    @mixin reset-input
+
+    height: auto
+    min-height: calc(var(--inp-textbox-height) + 5px)
+    line-height: normal
+    line-height: var(--inp-textbox-height)\0/;
+    width: 100%
+    overflow-x: hidden
+    -ms-overflow-style: none
+    display: block
+    padding: 7px 7px
+
+    &::-webkit-scrollbar
+      /*display: none*/
+
+    &::placeholder
+      color: #aaa
+
+    &--ltr
+      direction: ltr
+      text-align: left
+
+    &--rtl
+      direction: rtl
+      text-align: right
+
+
+  &__suffix,
+  &__prefix
+    padding: 0 10px
+    letter-spacing: -.5px
+    color: #555
+
+  &__suffix
+    padding-left: 15px
+
+  &__prefix
+    padding-right: 15px
+
+  /*&__start-icons
+  &__end-icons*/
+
+  &__icon
+    display: inline-block
+    padding: 3px 10px 0 10px
+
+    &:before,
+    &::before
+      color: #555
+      margin: 0
+
+    &--clickable
+      cursor: pointer
+      transition: text-shadow .1s
+
+      &:hover
+        @mixin soft-text-shadow 1.5, .2
+
+  // -- styles
+  &--disabled
+    color: #aaa
+    cursor: default
+    opacity: 0.9
+
+    & .input
+      &__label
+        color: #aaa
+
+      &__textbox
+        box-shadow: none
+        background: #f9f9f9
+
+      &__input
+        color: #555
+
+  &--full-width
+    max-width: 100%
+
+  &--small-full-width
+    @media (--small-viewport)
+      max-width: 100% !important
+
+  &--medium-full-width
+    @media (--medium-viewport)
+      max-width: 100% !important
+
+  &--ltr
+    direction: ltr
+    text-align: left
+
+    & .input__label
+      &__start
+        text-align: left
+      &__end
+        text-align: right
+
+  &--textbox-ltr
+    & .input__textbox
+      direction: ltr
+      text-align: left
+
+  &--multiline
+    height: auto
+
+    & .input__start-icons,
+    & .input__end-icons
+      line-height: var(--inp-textbox-height)
+      vertical-align: top
+
+  &--error
+    .input__textbox
+      border: 1px solid var(--color-perfect-yellow)

@@ -1,0 +1,17 @@
+// An instanse of .layout-wrapper
+.main-wrapper
+  margin: calc((-1 * var(--top-background-height))) auto 0 auto
+
+  &__box
+    position: relative
+    width: 100%
+    min-height: var(--box-min-height)
+    height: auto
+    margin-bottom: 30px
+    background: #fff
+
+    @mixin soft-shadow 4.5, .4
+
+    @media print
+      min-height: 0
+      box-shadow: none

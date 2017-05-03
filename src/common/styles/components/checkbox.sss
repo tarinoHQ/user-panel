@@ -1,0 +1,26 @@
+.checkbox
+  width: auto
+  display: inline-block
+  padding: 2px 0 4px 7px
+  white-space: nowrap
+  color: #666
+
+  &__input
+    margin: 0 1px 1px 7px
+
+  &__label
+    cursor: pointer
+    user-select: none
+    letter-spacing: -.1px
+    font-size: 14.5px
+    font-weight: 600
+    
+  &--disabled
+    color: #aaa
+    opacity: .9
+
+    & .checkbox__label
+      cursor: default
+
+  &--full-width
+    display: block

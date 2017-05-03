@@ -1,0 +1,84 @@
+.new-domain
+  &__results
+    &__row
+      cursor: pointer
+
+      & .table__cell
+        color: #433550
+
+      &.is-unavailable
+        opacity: 0.5
+
+        & .table__cell
+          color: var(--color-perfect-red)
+
+    &__check
+      margin-right: 10px
+
+    &__icon
+      &.icon-ok
+        color: var(--color-perfect-green)
+
+  &__dns
+    &__hint
+      margin: 0 0 10px 0
+      padding: 3px 20px 3px 0
+      font-size: 14px
+      color: #aaa
+
+    &__label
+      font-size: 14px
+      color: #555
+      font-weight: 600
+
+    &__add-input
+      width: var(--inp-width)
+      height: 36px
+      line-height: 33px
+      font-size: 20px
+      text-align: center
+      border-radius: 3px
+      border: 1px dotted var(--color-perfect-blue)
+      color: var(--color-perfect-blue)
+      cursor: pointer
+      transition: background .1s, color .1s
+
+      @media (--small-viewport)
+        width: 100%
+
+      &:hover
+        background: var(--color-perfect-blue)
+        color: #fff
+
+      &--disabled
+        opacity: 0.9
+        background: #f9f9f9
+        color: #aaa
+
+  &__total
+    @mixin clearfix
+
+    padding: 15px 20px
+    margin-top: 15px
+    border-top: 1px solid #ccc
+    background: #f7f7f7
+
+    &__price
+      float: right
+      font-size: 18px
+      line-height: 40px
+
+      @mixin soft-text-shadow .8, .2
+
+    &__btn
+      float: left
+
+    @media (--small-viewport), (--medium-viewport)
+      text-align: center
+      
+      ^&__price
+        float: none
+        margin-bottom: 10px
+
+      ^&__btn
+        float: none

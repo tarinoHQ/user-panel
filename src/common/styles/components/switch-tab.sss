@@ -1,0 +1,55 @@
+.switch-tab
+  width: auto
+  overflow: hidden
+  display: table
+  border-radius: 3px
+  border: 1px solid var(--swtb-color-blue)
+
+  &__option
+    display: table-cell
+    padding: 4px 25px 2px 25px
+    font-family: IRANSans
+    font-size: 14px
+    text-align: center
+    vertical-align: middle
+    cursor: pointer
+    border-left: 1px solid var(--swtb-color-blue)
+    color: var(--swtb-color-blue)
+    transition: background .15s, color .15s
+
+    &:hover
+      background: #fbfbfb
+
+      @mixin soft-text-shadow 1, .1
+
+    &:last-child
+      border-left: none
+
+    &--active
+      background: var(--swtb-color-blue)
+      color: #fff
+
+      &:hover
+        background: var(--swtb-color-blue)
+        color: #fff
+
+  // themes
+  &--gray
+    border: 1px solid var(--swtb-color-gray)
+    & .switch-tab
+      &__option
+        padding: 10px 20px 8px 20px
+        font-size: 16px
+        border-left: 1px solid var(--swtb-color-gray)
+        color: #aaa
+        &__img
+          max-height: 22px
+          display: inline-block
+          vertical-align: middle
+          margin-left: 7px
+        &--active
+          background: var(--swtb-color-gray)
+          color: #888
+          &:hover
+            background: var(--swtb-color-gray)
+            color: #888

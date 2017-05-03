@@ -1,0 +1,28 @@
+.ticket
+  &__details
+    display: block
+
+  &__detail
+    display: inline-block
+    margin-left: 10px
+    &__key
+      margin-left: 7px
+      color: #bbb
+
+  &__title
+    padding: 7px 0
+    font-size: 17px
+    font-weight: 600
+    color: var(--color-perfect-blue)
+    cursor: pointer
+
+    &:hover
+      color: var(--color-perfect-darkblue)
+
+  &__status
+    &--answered
+      color: var(--color-perfect-green)
+    &--closed
+      color: var(--color-perfect-red)
+    &--inprogress
+      color: var(--color-warning)

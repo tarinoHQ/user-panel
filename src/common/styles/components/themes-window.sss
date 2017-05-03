@@ -1,0 +1,22 @@
+.themes-window
+  overflow: hidden
+
+  &__side
+    width: 200px
+    height: 100%
+    padding-top: 100px
+    float: right
+
+  &__content
+    width: auto
+    margin-right: 200px
+    padding: 0 15px
+
+  @media (--small-viewport), (--medium-viewport)
+    &__side
+      width: 100%
+      padding: 5px 0 10px 0
+
+    &__content
+      width: 100%
+      margin-right: 0

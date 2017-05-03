@@ -1,0 +1,49 @@
+.table
+  width: 100%
+
+  &__row
+    &:nth-child(2n)
+      background: #fbfbfb
+
+  &__cell
+    font-size: 15px
+    padding: 15px 5px
+    border-bottom: 1px solid #ececec
+    color: #777
+
+  &__head
+    background: #fff
+
+    &__cell
+      padding: 15px 5px
+      font-size: 15px
+      font-weight: 600
+      border-bottom: 1px solid #e5e5e5
+      cursor: pointer
+      user-select: none
+
+      & *
+        user-select: none
+
+      &--desc,
+      &--asc
+        &:after
+          position: absolute
+          width: 20px
+          height: 20px
+          line-height: 20px
+          margin-right: 10px
+          display: inline-block
+          font-family: 'tpanel'
+          font-size: 15px
+
+      &--desc
+        &:after
+          content: '\e8e5'
+
+      &--asc
+        &:after
+          content: '\e8e2'
+
+      &--sorted
+        color: var(--color-perfect-blue)

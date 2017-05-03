@@ -1,0 +1,280 @@
+.host-plan
+  width: 100%
+  margin-bottom: 15px
+
+  @mixin soft-shadow 4, .15
+
+  &__header
+    position: relative
+    width: 100%
+    background: var(--color-perfect-blue)
+
+  &__icon
+    position: absolute
+    top: 10px
+    right: 10px
+    width: 50px
+    height: 50px
+    z-index: 1
+    background-size: contain
+    background-position: top right
+    opacity: 0.3
+
+  &__header-top,
+  &__price
+    position: relative
+    z-index: 2
+
+  &__header-top
+    @mixin clearfix
+
+  &__title
+    padding-top: 10px
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    text-align: center
+    font-size: 21px
+    font-weight: 600
+    color: #fff
+
+    @mixin soft-text-shadow 1.9, .24
+
+  &__most-popular
+    width: auto
+    height: 25px
+    line-height: 25px
+    padding: 0 6px 0 7px
+    margin: 15px 2px 0 14px
+    display: none
+    font-size: 12.5px
+    letter-spacing: -.2px
+    border-radius: 3px
+    background: #fff
+    color: var(--color-perfect-blue)
+
+    &:before
+      content: "\e807"
+      font-family: 'tpanel'
+      margin-left: 4px
+
+  &__price
+    color: #fff
+    text-align: center
+    margin-top: 10px
+    padding-bottom: 6px
+    letter-spacing: .6px
+
+    &__frequency
+      display: inline-block
+
+    &__amount
+      display: inline-block
+      margin-right: 6px
+      text-align: right
+
+    &__pervious
+      position: relative
+      display: none // inline
+      font-size: 13px
+      opacity: .8
+
+      &:after
+        content: ""
+        position: absolute
+        right: 0
+        left: 0
+        top: 48%
+        width: auto
+        height: 1px
+        background: #fff
+        opacity: 0.8
+
+    &__current
+      line-height: 1em
+      font-size: 14px
+      font-weight: normal
+
+      &__num
+        margin-left: 6px
+        font-size: 17px
+        font-weight: bold
+
+    &__discount
+      display: none // block
+      margin-top: -1px
+      font-weight: normal
+      font-size: 13px
+
+
+  &__specs
+    padding: 18px 8px 4px 8px
+    text-align: center
+    font-size: 14px
+
+  &__spec
+    margin-bottom: 9px
+    line-height: 1.6
+    letter-spacing: 0px
+    color: #777
+
+    & strong
+      color: #555
+
+  &__actions
+    display: block
+    padding: 3px 17px 17px 17px
+
+  &__actions__choose
+    @mixin reset-button
+
+    position: relative
+    width: 100%
+    display: block
+    padding: 5px 0
+    font-size: 14px
+    border-radius: 3px
+    border: 1px solid var(--color-perfect-blue)
+    color: color(var(--color-perfect-blue) shade(12%))
+    cursor: pointer
+    transition: background .2s, color .2s
+
+    &:before
+      /*content: "\e807"*/
+      position: absolute
+      top: 5px
+      right: 10px
+      font-family: 'tpanel'
+
+    &:hover
+      background: var(--color-perfect-blue)
+      color: #fff
+
+
+  // styles
+  &--most-popular
+    @mixin soft-shadow 7, .3
+
+    & .host-plan
+      &__title
+        width: auto
+        padding-right: 15px
+        margin-left: 85px
+        text-align: right
+
+      &__most-popular
+        display: block
+        float: left
+
+      &__actions__choose
+        &:before
+          content: "\e807"
+  // --
+  &--selected
+    @mixin gredient color(var(--color-perfect-blue) lightness(45%)), var(--color-perfect-blue)
+
+    & .host-plan
+      &__header
+        background: none
+
+      &__spec
+        color: rgba(255, 255, 255, 0.9)
+        & strong
+          color: #fff
+
+      &__actions__choose
+        border-color: transparent
+        color: #fff
+        &:before
+          content: ""
+  // --
+  &--off
+    & .host-plan
+      &__price
+        margin-top: 4px
+
+        &__pervious
+          display: inline
+
+        &__discount
+          display: block
+
+  &--inline
+    width: 100%
+    max-width: 220px
+    min-height: 250px
+    display: -moz-inline-stack
+    display: inline-block
+    vertical-align: top
+    margin-left: 14px
+    margin-bottom: 14px
+    zoom: 1
+    *display: inline
+    _height: 250px
+
+    @media (--medium-viewport)
+      max-width: 48%
+      margin-left: 0
+
+      &:nth-child(2n-1)
+        margin-left: 4%
+
+    @media (--small-viewport)
+      max-width: 100%
+      margin-left: 0
+
+
+  &--pro
+    & .host-plan
+      &__header
+        background: #fa0a7c
+
+      &--selected
+        @mixin gredient color(#fa0a7c lightness(45%)), #fa0a7c
+
+      &__actions__choose
+        color: color(#fa0a7c shade(12%))
+        border: 1px solid #fa0a7c
+
+        &:hover
+          background: #fa0a7c
+          color: #fff
+
+      &__most-popular
+        color: #fa0a7c
+
+  // state
+  &--pro&--selected
+    @mixin gredient color(#fa0a7c lightness(45%)), #fa0a7c
+
+    & .host-plan
+      &__header
+        background: none
+
+      &__spec
+        color: rgba(255, 255, 255, 0.9)
+        & strong
+          color: #fff
+
+      &__actions__choose
+        border-color: transparent
+        color: #fff
+        &:before
+          content: ""
+
+  // state
+  &--disabled
+    opacity: .7
+    box-shadow: 0px 0px 2px #bbb
+
+    & .host-plan
+      &__header
+        background: #bbb
+
+      &__actions__choose
+        border: 1px dashed #999
+        color: #999
+        &:hover
+          background: #fff
+          color: inherit
+        

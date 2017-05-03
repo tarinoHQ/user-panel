@@ -1,0 +1,37 @@
+.dns-form
+  width: 100%
+
+  &__hint
+    margin: 0 0 10px 0
+    padding: 3px 20px 3px 0
+    font-size: 14px
+    color: #aaa
+
+  &__label
+    font-size: 14px
+    color: #555
+    font-weight: 600
+
+  &__add-input
+    width: var(--inp-width)
+    height: 36px
+    line-height: 33px
+    font-size: 20px
+    text-align: center
+    border-radius: 3px
+    border: 1px dotted var(--color-perfect-blue)
+    color: var(--color-perfect-blue)
+    cursor: pointer
+    transition: background .1s, color .1s
+
+    @media (--small-viewport)
+      width: 100%
+
+    &:hover
+      background: var(--color-perfect-blue)
+      color: #fff
+
+    &--disabled
+      opacity: 0.9
+      background: #f9f9f9
+      color: #aaa

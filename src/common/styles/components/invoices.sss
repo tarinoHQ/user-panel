@@ -1,0 +1,19 @@
+.invoices
+  &__row
+    &--paid
+      & td
+        color: #3aa838
+
+    &--unpaid
+      & td
+        color: #1a838e
+
+    &--expired
+      opacity: 0.4
+      transition: opacity .3s
+
+      &:hover
+        opacity: 1
+
+      & td
+        color: #1a838e

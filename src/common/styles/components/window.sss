@@ -1,0 +1,82 @@
+.window
+  position: fixed
+  top: 25px
+  right: 25px
+  left: 25px
+  bottom: 25px
+  width: auto
+  height: auto
+  overflow: auto
+  z-index: 5
+  background: #fff
+
+  @mixin soft-shadow 5, .5
+
+  @media (--medium-viewport)
+    top: 10px
+    right: 10px
+    left: 10px
+    bottom: 10px
+
+  @media (--small-viewport)
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+
+  &__close
+    position: absolute
+    top: 15px
+    left: 15px
+    width: 40px
+    height: 40px
+    padding: 10px
+    cursor: pointer
+    transition: background .2s
+
+    & img
+      width: 20px
+
+    &:hover
+      background: #efefef
+
+    &:active
+      background: #e0e0e0
+
+  &__header
+    width: 100%
+    height: 85px
+    padding: 15px 20px 0 0
+    font-family: 'IRANSans'
+      
+  &__title
+    line-height: 1.6em
+    font-size: 26px
+    font-weight: 500
+
+    @media (--small-viewport)
+      font-size: 22px
+
+  &__backlink
+    width: auto
+    display: inline-block
+    padding: 3px 4px 3px 6px
+    margin-right: -3px
+    line-height: 1.1em
+    font-size: 14px
+    font-weight: 500
+    cursor: pointer
+    transition: background .2s
+    border-radius: 3px
+    color: #888
+
+    &:before 
+      content: '\e8e4'
+      padding-left: 7px
+      font-family: tpanel
+
+    &:hover
+      background: #efefef
+
+    &:active
+      background: #e0e0e0

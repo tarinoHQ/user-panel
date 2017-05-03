@@ -1,0 +1,62 @@
+.checklist
+  width: 100%
+
+  &__row
+    width: 100%
+    padding-top: 10px
+    padding-bottom: 5px
+
+    &__checkboxes
+      display: inline-block
+      margin: 0 0 5px 3px
+
+    &__checkarea
+      display: inline-block
+      padding: 2px 7px
+      margin-left: 8px
+      border-radius: 7px
+      background: #f3f3f3
+      cursor: pointer
+      transition: background .2s
+
+    &__checkbox
+      display: inline
+      cursor: pointer
+
+      @mixin soft-shadow 1.2, .1
+
+    &__check-label
+      margin-right: 7px
+      font-size: 13px
+      font-weight: 600
+      user-select: none
+      color: #777
+
+    // -- states
+    &:hover
+      & .checklist__row
+        &__checkarea
+          background: #f0f0f0
+          &--checked
+            background: color(var(--color-perfect-blue) shade(5%))
+
+        &__label
+          @mixin soft-text-shadow 1.5, .1
+
+    // -- styles
+    &__checkarea--checked
+      background: var(--color-perfect-blue)
+
+      & .checklist__row
+        &__checkbox
+          @mixin soft-shadow 2, .2
+
+        &__check-label
+          color: #fff
+
+    // Main label
+    &__label
+      display: inline
+      font-weight: 600
+      color: #666
+      transition: text-shadow .2s

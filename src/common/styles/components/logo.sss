@@ -1,0 +1,21 @@
+.logo
+  height: var(--logo-height)
+  width: calc(var(--logo-height) * 2.24)
+  background-image: url("../assets/images/tarino_logo_white.svg")
+  background-repeat: no-repeat
+  background-size: calc(var(--logo-height) * 2.24) var(--logo-height)
+  opacity: 0.65
+  text-indent: -99999px
+  cursor: pointer
+  transition: opacity .2s
+
+  &:hover
+    opacity: 1
+
+  .no-svg &
+    background-image: url("../assets/images/tarino_logo_white.png")
+
+  @media (--medium-viewport), (--small-viewport)
+    height: 15px
+    width: 35px
+    background-size: 100% auto

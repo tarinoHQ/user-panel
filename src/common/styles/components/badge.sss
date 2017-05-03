@@ -1,0 +1,39 @@
+.badge
+  height: 15px
+  width: auto
+  padding: 1px 5px 0 5px
+  line-height: 15px
+  // font-family: IRANSans, IRAN, Tahoma
+  font-size: 12px
+  font-weight: 600
+  user-select: none
+  border-radius: 10px
+  background: #f2f2f2
+
+  &--success
+    background: var(--color-success)
+    color: rgba(255, 255, 255, 0.9)
+    &^&--no-bg
+      background: none
+      color: var(--color-success)
+
+  &--danger
+    background: var(--color-danger)
+    color: rgba(255, 255, 255, 0.9)
+    &^&--no-bg
+      background: none
+      color: var(--color-danger)
+
+  &--warning
+    background: var(--color-warning)
+    color: rgba(255, 255, 255, 0.9)
+    &^&--no-bg
+      background: none
+      color: var(--color-warning)
+
+  &--info
+    background: var(--color-info)
+    color: rgba(255, 255, 255, 0.9)
+    &^&--no-bg
+      background: none
+      color: var(--color-info)

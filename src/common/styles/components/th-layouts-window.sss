@@ -1,0 +1,43 @@
+.th-layouts-window
+  overflow: hidden
+  padding: 15px 20px
+
+  &__side
+    width: 320px
+    height: 100%
+    float: right
+
+  &__content
+    width: auto
+    margin-right: 320px
+    padding: 0 30px
+
+  &__preview
+    padding: 12px 20px
+    font-size: 14px
+    background: #e7fafd
+
+  &__banner
+    height: auto
+    padding-top: 20px
+    margin-top: 20px
+    border-top: 2px dashed #efefef
+
+    & img 
+      width: 100%
+
+  &__details
+    height: auto
+    padding-top: 20px
+    margin-top: 20px
+    border-top: 2px dashed #efefef
+
+  @media (--small-viewport), (--medium-viewport)
+    &__side
+      width: 100%
+      padding: 5px 0 10px 0
+
+    &__content
+      width: 100%
+      margin-right: 0
+      padding: 0

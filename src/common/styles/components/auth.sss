@@ -1,0 +1,40 @@
+.auth
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+
+  @mixin gredient #9575CD, #7B1FA2
+
+  &__content
+    margin: 50px auto 0 auto
+    width: 100%
+    max-width: var(--auth-content-width)
+    height: auto
+    padding: 0 20px 20px 20px
+
+    @media (height <= 400px)
+      margin-top: 10px
+
+  &__logo-wrapper
+    padding-bottom: 30px
+    text-align: center
+
+  &__logo
+    height: var(--auth-logo-height)
+    width: calc(var(--auth-logo-height) * 2.24)
+    display: inline-block
+    background-image: url("../assets/images/tarino_logo_white.svg")
+    background-repeat: no-repeat
+    background-size: calc(var(--auth-logo-height) * 2.24) var(--auth-logo-height)
+    opacity: 0.9
+    text-indent: -99999px
+    cursor: pointer
+    transition: opacity .2s
+
+    &:hover
+      opacity: 1
+
+    .no-svg &
+      background-image: url("../assets/images/tarino_logo_white.png")

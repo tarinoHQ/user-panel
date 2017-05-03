@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="66px" viewBox="0 0 100 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>germany</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="germany">
+            <path d="M99.8050682,21.8502924 L0,21.8502924 L0,1.77446394 C0,0.82417154 0.770565302,0.0536062378 1.7208577,0.0536062378 L98.0844055,0.0536062378 C99.0346979,0.0536062378 99.8052632,0.82417154 99.8052632,1.77446394 L99.8052632,21.8502924 L99.8050682,21.8502924 Z" id="Shape" fill="#464655"></path>
+            <path d="M98.0842105,65.4432749 L1.7208577,65.4432749 C0.770565302,65.4432749 0,64.6727096 0,63.7224172 L0,43.6467836 L99.8050682,43.6467836 L99.8050682,63.7224172 C99.8050682,64.6729045 99.0345029,65.4432749 98.0842105,65.4432749 L98.0842105,65.4432749 Z" id="Shape" fill="#FFE15A"></path>
+            <rect id="Rectangle-path" fill="#FF4B55" x="0" y="21.8495127" width="99.8050682" height="21.7957115"></rect>
+        </g>
+    </g>
+</svg>

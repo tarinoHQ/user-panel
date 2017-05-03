@@ -1,0 +1,102 @@
+{
+  "apps": [
+    {
+      // Panel SSR
+      "name"              : "panel-ssr",
+      "script"            : "./panel/index.js",
+      "cwd"               : "/tarino/panel",
+      "watch"             : false,
+      "max_memory_restart": "650M",
+      "env"               : {
+        "NODE_ENV"        : "development"
+      },
+      "env_production"    : {
+        "NODE_ENV"        : "production",
+        "PORT"            : 5000
+      },
+      "env_staging"       : {
+        "NODE_ENV"        : "staging"
+      }
+    },
+    {
+      // Main Theme
+      "name"              : "theme",
+      "script"            : "./theme/index.js",
+      "cwd"               : "/tarino/theme",
+      "watch"             : false,
+      "instances"         : "max",
+      "exec_mode"         : "cluster",
+      "error_file"        : "./child-err.log",
+      "out_file"          : "./child-out.log",
+      "pid_file"          : "./child.pid",
+      "env"               : {
+        "NODE_ENV"        : "development",
+        "PORT"            : 5100
+      },
+      "env_production"    : {
+        "NODE_ENV"        : "production",
+        "PORT"            : 5100
+      },
+      "env_staging"       : {
+        "NODE_ENV"        : "staging",
+        "PORT"            : 5100
+      }
+    },
+    {
+      // New Theme
+      "name"              : "newtheme",
+      "script"            : "./newtheme/index.js",
+      "cwd"               : "/tarino/newtheme",
+      "watch"             : false,
+      "instances"         : "max",
+      "exec_mode"         : "cluster",
+      "error_file"        : "./child-err.log",
+      "out_file"          : "./child-out.log",
+      "pid_file"          : "./child.pid",
+      "env"               : {
+        "NODE_ENV"        : "development",
+        "PORT"            : 5500
+      },
+      "env_production"    : {
+        "NODE_ENV"        : "production",
+        "PORT"            : 5500
+      },
+      "env_staging"       : {
+        "NODE_ENV"        : "staging",
+        "PORT"            : 5500
+      }
+    },
+    {
+      // Scripts Main Api
+      "name"              : "scripts-api",
+      "script"            : "./scripts/api.js",
+      "cwd"               : "/tarino/scripts",
+      "watch"             : false,
+      "instances"         : "max",
+      "exec_mode"         : "cluster",
+      "error_file"        : "./child-err.log",
+      "out_file"          : "./child-out.log",
+      "pid_file"          : "./child.pid",
+      "env"               : {
+        "NODE_ENV"        : "development",
+        "PORT"            : 5200
+      },
+      "env_production"    : {
+        "NODE_ENV"        : "production",
+        "PORT"            : 5200
+      },
+      "env_staging"       : {
+        "NODE_ENV"        : "staging",
+        "PORT"            : 5200
+      }
+    },
+    // {
+    //   // Server Status
+    //   "name"              : "server-status",
+    //   "script"            : "./scripts/server_status/index.js",
+    //   "cwd"               : "/tarino/scripts/server_status",
+    //   "watch"             : true,
+    //   "exec_mode"         : "fork"
+    // }
+  ]
+}

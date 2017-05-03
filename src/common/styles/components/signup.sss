@@ -1,0 +1,29 @@
+.signup
+  &__github-btn
+    background: #72899e
+    color: rgba(255, 255, 255, 0.95)
+    &:hover
+      background: color(#72899e shade(8%))
+    &:active
+      background: color(#72899e shade(15%))
+      color: rgba(255, 255, 255, 0.8)
+
+  &__or
+    position: relative
+    width: 100%
+    height: 1px
+    margin: 25px 0 25px 0
+    background: #d5d5d5
+
+    &:before
+      content: 'یا'
+      position: absolute
+      right: 50%
+      top: -15px
+      width: 30px
+      height: 30px
+      margin-right: -15px
+      line-height: 30px
+      text-align: center
+      background: #fff
+      color: #ddd

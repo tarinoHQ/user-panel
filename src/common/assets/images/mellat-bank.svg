@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="2800px" height="2834px" viewBox="0 0 2800 2834" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Mellat</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="16.0001%" cy="15.0001%" fx="16.0001%" fy="15.0001%" r="17%" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E8909A" offset="41.1765%"></stop>
+            <stop stop-color="#D12236" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="99.1698113%" y1="100.883019%" x2="0.833962264%" y2="-0.877987421%" id="linearGradient-2">
+            <stop stop-color="#FFD88B" offset="0%"></stop>
+            <stop stop-color="#FFD88B" offset="7.84314%"></stop>
+            <stop stop-color="#FFD55D" offset="49.0196%"></stop>
+            <stop stop-color="#FFD22E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Mellat">
+                <g id="Group">
+                    <g id="__x0023_Layer_x0020_3">
+                        <g id="_908020416">
+                            <path d="M1300,34 L680,400 C519,466 552,642 552,642 L552,642 L549,1976 L882,1786 C709,1132 1300,1021 1300,1021 L1300,1021 L1300,498 C1310,335 1428,436 1428,436 L1428,436 L2250,907 L2245,652 C2250,440 2124,407 2124,407 L2124,407 L1493,34 C1460,9 1427,1 1398,1 C1341,1 1300,34 1300,34 L1300,34 L1300,34 Z" id="Shape" fill="url(#radialGradient-1)"></path>
+                            <path d="M549,1976 L552,642 C552,642 519,466 680,400 L1300,34 C1300,34 1392,-41 1493,34 L2124,407 C2124,407 2250,440 2245,652 L2250,907 L1428,436 C1428,436 1310,335 1300,498 L1300,1021 C1300,1021 709,1132 882,1786 L549,1976 L549,1976 Z" id="Shape" stroke="#AA1F00" stroke-width="83.3346"></path>
+                            <path d="M1470,651 L2637,1326 C2637,1326 2807,1387 2785,1558 L2798,2277 C2798,2277 2818,2394 2702,2443 L2063,2797 C2063,2797 1972,2889 1789,2778 L1563,2653 L2383,2184 C2383,2184 2530,2134 2391,2043 L1934,1779 C1934,1779 2130,1214 1471,1033 L1470,651 L1470,651 Z" id="Shape" fill="#D12236"></path>
+                            <path d="M1470,651 L2637,1326 C2637,1326 2807,1387 2785,1558 L2798,2277 C2798,2277 2818,2394 2702,2443 L2063,2797 C2063,2797 1972,2889 1789,2778 L1563,2653 L2383,2184 C2383,2184 2530,2134 2391,2043 L1934,1779 C1934,1779 2130,1214 1471,1033 L1470,651 L1470,651 Z" id="Shape" stroke="#AA1F00" stroke-width="83.3346"></path>
+                            <path d="M2171,2116 L998,2779 C998,2779 859,2895 723,2790 L97,2436 C97,2436 -14,2395 2,2270 L21,1539 C21,1539 -12,1414 177,1312 L399,1181 L388,2126 C388,2126 356,2278 505,2205 L964,1944 C964,1944 1352,2399 1842,1924 L2171,2116 L2171,2116 Z" id="Shape" fill="#D12236"></path>
+                            <path d="M2171,2116 L998,2779 C998,2779 859,2895 723,2790 L97,2436 C97,2436 -14,2395 2,2270 L21,1539 C21,1539 -12,1414 177,1312 L399,1181 L388,2126 C388,2126 356,2278 505,2205 L964,1944 C964,1944 1352,2399 1842,1924 L2171,2116 L2171,2116 Z" id="Shape" stroke="#AA1F00" stroke-width="83.3346"></path>
+                            <path d="M998,1584 C998,1803 1176,1981 1396,1981 C1615,1981 1793,1803 1793,1584 L1793,1584 C1793,1364 1615,1186 1396,1186 C1176,1186 998,1364 998,1584 L998,1584 Z" id="Shape" fill="url(#linearGradient-2)"></path>
+                            <path d="M1793,1584 C1793,1364 1615,1186 1396,1186 C1176,1186 998,1364 998,1584 C998,1803 1176,1981 1396,1981 C1615,1981 1793,1803 1793,1584 L1793,1584 Z" id="Shape" stroke="#FF9F00" stroke-width="97.2205"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

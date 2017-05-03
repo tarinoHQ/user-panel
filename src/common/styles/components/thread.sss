@@ -1,0 +1,43 @@
+.thread
+  &__header
+    width: 100%
+    text-align: center
+
+  &__title
+    position: relative
+    padding: 5px 0 30px 0
+    display: block
+    text-align: center
+    line-height: 1.7em
+    font-size: 20px
+    font-weight: 600
+    color: #555
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0px
+      right: 50%
+      margin-right: -75px
+      width: 100%
+      max-width: 150px
+      height: 1px
+      background: #e5e5e5
+
+      @media (width <= 150px)
+        right: 10px
+        left: 10px
+        marign-right: 0
+        max-width: 100%
+
+  &__info-pair
+    display: inline
+    margin-left: 15px
+    font-size: 14px
+    font-weight: 600
+    color: #999
+
+    &__key
+      margin-left: 7px
+      font-weight: normal
+      opacity: .6

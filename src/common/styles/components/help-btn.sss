@@ -1,0 +1,41 @@
+@custom-selector :--wrapper .help-btn
+@custom-selector :--button .help-btn__button
+
+.help-btn
+  display: inline-block
+  margin: 0 5px
+  cursor: default
+
+  &__button
+    display: inline-block
+    width: 17px
+    height: 17px
+    padding: 1px 0 0 0
+    line-height: 17px
+    font-size: 14px
+    font-weight: bold
+    text-align: center
+    vertical-align: middle
+    border-radius: 10px
+    // border: 1px solid #e5e5e5
+    border: 1px solid #865b91
+    // background: #fff
+    background: #865b91
+    // color: #fba109
+    color: #fff
+    transition: box-shadow .2s, transform .1s
+
+    @mixin soft-shadow 1, .1
+
+    &:hover
+      transform: scale(1.1)
+
+      @mixin soft-shadow 2, .2
+
+    &:active
+      background: color(#865b91 shade(10%))
+      color: #f0f0f0
+
+// cursor pointer if tag was a
+a:--wrapper > :--button
+  cursor: pointer

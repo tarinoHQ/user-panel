@@ -1,0 +1,41 @@
+.copy-btn
+  position: relative
+  display: inline-block
+
+  &__button
+    @mixin reset-button
+
+    display: inline-block
+    text-align: center
+    font-size: 1em
+    color: var(--color-perfect-blue)
+    cursor: pointer
+    transition: opacity .2s
+
+  &__copied
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    width: auto
+    display: block
+    text-align: center
+    font-size: 1em
+    color: var(--color-perfect-blue)
+    cursor: pointer
+    opacity: 1
+    transform: translateY(0)
+    transition: top .5s, opacity .7s
+
+    &--hidden
+      display: none
+
+  &--copying
+    & .copy-btn
+      &__copied
+        display: block
+        opacity: 0
+        top: -20px
+
+      &__button
+        opacity: .5

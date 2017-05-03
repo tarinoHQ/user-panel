@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "parser": "sugarss",
+  "rules": {
+    "declaration-block-trailing-semicolon": null,
+    "at-rule-empty-line-before": null,
+    "value-list-comma-newline-after": null
+  }
+}

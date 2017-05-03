@@ -1,0 +1,115 @@
+// Rquires `flash` animation
+.service
+  // Service Resources
+  &-res
+    &__status
+      user-select: none
+      cursor: default
+
+      @mixin soft-text-shadow 1, .1
+
+      &:before
+        content: ' '
+        width: 10px
+        height: 10px
+        display: inline-block
+        margin-left: 7px
+        border-radius: 10px
+        background: color(var(--color-success) lightness(55%))
+        animation-duration: 5s
+        animation-iteration-count: infinite
+        animation-name: flash
+        transition: box-shadow .2s
+
+      &:hover
+        &:before
+          @mixin soft-shadow 3, .2
+
+      &--enable
+        color: var(--color-success)
+
+      &--disable
+        color: var(--color-danger)
+        &:before
+          background: color(var(--color-danger) lightness(55%))
+          animation-name: none
+
+    &__status-msg
+      margin: 5px 0 0 0
+      font-size: 14px
+
+      &--good
+        color: color(var(--color-success) lightness(45%))
+
+      &--warning
+        color: color(var(--color-warning) lightness(45%))
+
+      &--danger
+        color: var(--color-danger)
+
+    &__disable-hint
+      margin-top: 10px
+      font-size: 14px
+      color: #666
+
+  // Analyse and Visitor Stats
+  &-an
+    &__chart-tooltip
+      padding: 10px
+      direction: rtl
+      line-height: 1.6
+      font-size: 14px
+      text-align: right
+      border: 1px solid #e5e5e5
+      background: #fff
+
+      @mixin soft-shadow 10, .1
+
+      & p
+        margin: 0
+
+    &__fact
+      margin-bottom: 14px
+
+    &__alexa
+      display: inline-block
+      margin-left: 15px
+      font-size: 15px
+
+      &__rank
+        display: inline-block
+        margin-left: 5px
+        font-size: 25px
+        font-family: IRANSans
+        font-weight: 600
+        letter-spacing: 1px
+
+    &__seo
+      display: inline-block
+      margin-left: 15px
+      font-size: 15px
+
+      &__percent
+        display: inline-block
+        margin-left: 5px
+        font-size: 25px
+        font-family: IRANSans
+        font-weight: 600
+        letter-spacing: 1px
+
+    &__part-title
+      margin: 25px 0 10px 0
+
+  &-up
+    &__plan
+      width: 33%
+      float: right
+      padding-left: 20px
+      padding-bottom: 20px
+
+      @media (--medium-viewport)
+        width: 50%
+
+      @media (--small-viewport)
+        width: 100%
+        padding-left: 0

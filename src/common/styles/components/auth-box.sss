@@ -1,0 +1,30 @@
+.auth-box
+  width: 100%
+  padding: 20px 25px 25px 25px
+  border-radius: 3px
+  background: #fff
+
+  @mixin soft-shadow 12, .3
+
+  &__header
+    width: 100%
+    margin-bottom: 15px
+
+    @mixin clearfix
+
+  &__title
+    position: relative
+    float: right
+    font-size: 25px
+    font-weight: bold
+    color: var(--color-primary)
+
+    @mixin soft-text-shadow 2, .15
+
+  &__subtitle
+    float: left
+    margin-top: 12px
+    font-size: 14px
+    font-weight: 600
+    color: #555
+    opacity: 0.8

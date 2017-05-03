@@ -1,0 +1,140 @@
+.theme
+  width: 100%
+  min-height: 230px
+  margin-bottom: 15px
+  overflow: hidden
+  border: 1px solid var(--color-pale-gray)
+
+  @mixin soft-shadow 4, .1
+
+  &__banner
+    width: 448px
+    height: 228px
+    overflow: hidden
+    float: right
+
+    & img
+      width: 100%
+
+  &__info
+    width: auto
+    margin-right: 450px
+    padding: 18px 15px
+
+    &__top
+      position: relative
+      min-height: 50px
+      padding-left: 50px
+      margin-bottom: 5px
+
+    &__bottom
+      text-align: left
+
+  // top
+  &__title
+    font-size: 25px
+    font-weight: 600
+
+  &__category
+    font-size: 15px
+    font-family: IRANSans
+    color: #999
+
+    &__link
+      color: var(--color-perfect-blue)
+      margin-right: 5px
+      &:after
+        content: '،'
+      &:last-child:after
+        content: ''
+
+  &__lang
+    position: absolute
+    top: 0
+    left: 0
+    width: 70px
+    height: 50px
+    font-size: 1em
+    font-family: IRANSans
+    font-weight: 300
+    text-align: left
+
+    // &:before
+    //   content: '\e807'
+    //   margin-right: 5px
+    //   font-family: tpanel
+    //   font-size: 18px
+    //   color: #fbbe22
+
+  // center
+  &__row
+    margin-bottom: 5px
+    font-family: IRANSans
+    font-size: 15px
+
+    &__label
+      font-weight: bold
+      margin-left: 10px
+
+  // bottom
+  &__btn
+    margin-right: 8px
+
+  // - mini mode
+  @media (--medium-viewport)
+    min-height: 110px
+
+    &__banner
+      width: 200px
+      height: 100px
+      margin: 15px 15px 0 0
+
+    &__info
+      margin-right: 220px
+      &__middle
+        display: none
+
+    &__title
+      font-size: 18px
+      font-weight: 600
+      letter-spacing: -.2px
+
+    &__category
+      font-size: 14px
+      font-family: IRANSans
+      color: #999
+
+    &__info
+      &__top
+        margin-bottom: 30px
+
+  // - ultra mini mode
+  @media (--small-viewport)
+    min-height: 110px
+
+    &__banner
+      width: 230px
+      height: 120px
+      margin: 15px auto 0 auto
+      float: none
+
+    &__info
+      margin-right: 0
+      &__middle
+        display: none
+      &__bottom
+        text-align: center
+
+    &__title
+      font-size: 18px
+      font-weight: 600
+      letter-spacing: -.2px
+
+    &__category
+      font-size: 14px
+      font-family: IRANSans
+      color: #999
+
+    &__info
+      &__top
+        margin-bottom: 30px

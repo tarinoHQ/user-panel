@@ -1,0 +1,23 @@
+.icon-text
+  margin-top: 7px
+  margin-top: 3px
+  line-height: 1.6
+  letter-spacing: -.2px
+
+  @mixin soft-text-shadow 1.5, .1
+
+  &__icon
+    margin-left: 5px
+
+  // Colors
+  &--success
+    color: color(var(--color-success) lightness(45%))
+
+  &--info
+    color: var(--color-info)
+
+  &--warning
+    color: color(var(--color-warning) lightness(45%))
+
+  &--danger
+    color: var(--color-danger)

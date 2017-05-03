@@ -1,0 +1,38 @@
+.manage-service-header
+  @mixin clearfix
+
+  &__service
+    width: auto
+    float: right
+
+  &__button
+    float: left
+    text-align: left
+    display: flex
+    justify-content: center
+
+  &__msg
+    float: left
+    clear: right
+    line-height: .4em
+    text-align: left
+    font-size: 14px
+
+    &--danger
+      color: var(--color-danger)
+
+  @media (--small-viewport), (--medium-viewport)
+    & .manage-service-header
+      &__service
+        float: none
+
+      &__button
+        float: none
+        padding-top: 15px
+        text-align: center
+
+      &__msg
+        float: none
+        line-height: 1.1em
+        margin-top: 15px
+        text-align: center

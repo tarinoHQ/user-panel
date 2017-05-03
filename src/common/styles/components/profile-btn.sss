@@ -1,0 +1,112 @@
+.profile-btn
+  position: relative
+
+  &__avatar
+    @mixin reset-button
+
+    position: relative
+    z-index: 4
+    width: var(--p-btn-size)
+    height: var(--p-btn-size)
+    margin-top: -2.5px
+    overflow: hidden
+    border-radius: calc(var(--p-btn-size) / 2)
+    background: var(--color-dark-bluegray)
+    cursor: pointer
+    z-index: 2
+    transition: border .2s, opacity .2s
+
+    @mixin soft-shadow 2.5, .5
+
+    &__img
+      position: absolute
+      right: 50%
+      top: 50%
+      margin-right: calc(-1 * var(--p-btn-size) / 2)
+      margin-top: calc(-1 * var(--p-btn-size) / 2)
+      user-select: none
+      border-radius: calc(var(--p-btn-size) / 2)
+      
+      &--border
+        border: 2px solid #fff
+
+    &:hover
+      // border: 0px solid transparent
+      opacity: 0.9
+
+  &__notifications
+    position: absolute
+    top: 0
+    left: calc(var(--p-btn-size) - 15px)
+    z-index: 3
+    height: 14px
+    width: auto
+    padding: 1px 4px 1px 4px
+    line-height: 15px
+    font-family: IRANSans, IRAN, Tahoma
+    font-size: 12px
+    user-select: none
+    border-radius: 10px
+    background: var(--color-perfect-red)
+    color: rgba(255, 255, 255, 0.9)
+    cursor: pointer
+
+    @mixin soft-shadow 1.5, .4
+
+  &__bubble
+    @mixin bubble-top 15%
+
+    position: absolute
+    left: 0
+    top: calc(var(--p-btn-size) + 10px)
+    height: auto
+    min-width: 140px
+    display: none
+    padding: 6px 0
+    font-size: 10px
+    transform-origin: 15% 0%;
+
+    @mixin card-view
+
+    & ul,
+    & li
+      margin: 0
+      list-style: none
+
+    & ul
+      padding: 0
+
+    &__item
+      position: relative
+      width: 100%
+      display: block
+      text-align: right
+      padding: var(--p-btn-item-vertical-padding) var(--p-btn-item-horizental-padding)
+      font-size: 1.4em
+      line-height: 1.2
+      cursor: pointer
+      text-decoration: none
+      color: #333
+
+      &:hover
+        background: color(var(--color-bright-gray) blackness(5%))
+
+      &--active
+        color: var(--color-perfect-blue)
+
+      &__badge
+        position: absolute
+        top: calc(var(--p-btn-item-vertical-padding) + .09em)
+        left: var(--p-btn-item-horizental-padding)
+        z-index: 3
+        height: 1.2em
+        padding: .06em .3em 0 .3em
+        line-height: 1.2em
+        font-size: .85em
+
+    &__separator
+      width: 100%;
+      text-align: right
+      padding: .4em .8em
+      font-size: 1.5em
+      cursor: pointer

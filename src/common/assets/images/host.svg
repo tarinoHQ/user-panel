@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="32.1080496%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00B3FF" offset="0%"></stop>
+            <stop stop-color="#8FF7BD" offset="100%"></stop>
+        </linearGradient>
+        <text id="text-2" font-family="Menlo-Regular, Menlo" font-size="22" font-weight="normal" letter-spacing="1.96533346" fill="#FFFFFF">
+            <tspan x="10.3686481" y="39">W</tspan>
+            <tspan x="25.5790987" y="39" font-family="Menlo-Bold, Menlo" font-weight="bold">W</tspan>
+            <tspan x="40.7895494" y="39">W</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.051319067 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="64" height="64"></rect>
+        <g id="Artboard" fill="#FFFFFF" fill-opacity="1">
+            <g id="WWW">
+                <use filter="url(#filter-3)" xlink:href="#text-2"></use>
+                <use xlink:href="#text-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
