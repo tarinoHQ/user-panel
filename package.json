@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start:dashboard": "NODE_ENV=development webpack-dashboard -c red -- node ./index.js",
-    "start": "NODE_ENV=development node ./index.js",
-    "start:dev": "NODE_ENV=development webpack-dev-server --config ./webpack.config.dev",
-    "start:pm2": "NODE_ENV=production pm2 start ./index.js",
-    "build": "NODE_ENV=development webpack --config webpack.config.dev.js",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start:server": "NODE_ENV=development node ./index.js",
+    "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.dev",
+    "build:dev": "NODE_ENV=development webpack --config webpack.config.dev.js",
+    "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "serve": "NODE_ENV=production pm2 start ./index.js",
+    "deploy:setup": "pm2 deploy production setup",
+    "deploy": "pm2 deploy production"
   },
   "author": "Mohammad Rajabifard (@morajabi)",
   "license": "ISC",
