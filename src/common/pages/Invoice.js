@@ -303,7 +303,7 @@ class Invoices extends Component {
               </div>
             </div>
 
-            {!invoice.offCode &&
+            {invoice.status !== 'paid' && !invoice.offCode &&
               <div className="invoice__total-row__coupon">
                 <div className="invoice__total-row__full">
                     <CouponForm invoiceId={this.invoiceId} />

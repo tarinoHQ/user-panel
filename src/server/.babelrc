@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-regenerator"
+  ],
+  "env": {
+    "development": {
+    },
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-inline-elements"
+      ]
+    }
+  }
+}

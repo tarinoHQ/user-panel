@@ -226,20 +226,24 @@ class Signup extends Component {
 
                 <Row gutter="10px">
                   <Col width={6}>
-                    <Button
-                      style={{ width: '100%' }}
-                      iconClass="icon-google"
-                      theme="info">
-                      ورود با گوگل
-                    </Button>
+                    <a href="https://m.tarino.ir/v1/google_login">
+                      <Button
+                        style={{ width: '100%' }}
+                        iconClass="icon-google"
+                        theme="info">
+                        ورود با گوگل
+                      </Button>
+                    </a>
                   </Col>
                   <Col width={6} gutterPosition="right">
-                    <Button
-                      style={{ width: '100%' }}
-                      className="signup__github-btn"
-                      iconClass="icon-github">
-                      ورود با گیت‌هاب
-                    </Button>
+                    <a href="https://m.tarino.ir/v1/google_login">
+                      <Button
+                        style={{ width: '100%' }}
+                        className="signup__github-btn"
+                        iconClass="icon-github">
+                        ورود با گیت‌هاب
+                      </Button>
+                    </a>
                   </Col>
                 </Row>
 

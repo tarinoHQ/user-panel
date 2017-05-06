@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render as renderDom } from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { Router } from 'react-router';
@@ -43,12 +43,28 @@ const rootElement = document.getElementById('root');
 // Render app in browser
 // const rootCompProps = { store: store, history: history, routes: routes };
 const rootCompProps = { history, routes, store };
-render(
-  <Provider store={store}>
-    <Root {...rootCompProps} />
-  </Provider>,
-  rootElement
-);
+
+
+const render = (Component) => {
+  renderDom(
+    <AppContainer>
+      <Provider store={store}>
+        <Component {...rootCompProps} />
+      </Provider>
+    </AppContainer>,
+    rootElement
+  );
+};
+
+render(Root);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('../common/containers/Root', () => {
+    render(Root);
+  });
+}
+
 
 // Hot module replacment for dev purpose
 // if (module.hot) {

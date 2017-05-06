@@ -11,7 +11,7 @@ import { renderToString } from 'react-dom/server';
 // import { AppContainer } from 'react-hot-loader';
 import Root from '../common/containers/Root';
 import Html from '../common/components/Html';
-import config from '../../webpack.config.dev';
+import config from '../../newwebpack.config';
 import { Provider } from 'react-redux';
 import rootSaga from '../common/sagas';
 import PrettyError from 'pretty-error';

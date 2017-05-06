@@ -9,8 +9,9 @@ let css = [];
 
 if (process.env.NODE_ENV === "production") {
   // on production, include scripts and css from the webpack stats
-  const config = require("../../../webpack.config.prod");
+  const config = require("../../../newwebpack.config")(process.env.NODE_ENV);
   const stats = require("../../../dist/stats.json");
+  scripts.push(`${config.output.publicPath}${stats.polyfills}`);
   scripts.push(`${config.output.publicPath}${stats.main}`);
   css.push(`${config.output.publicPath}${stats.css}`);
 }

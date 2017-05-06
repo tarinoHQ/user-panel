@@ -1,7 +1,0 @@
-TODO:
---- Invoice
-- remove off code in print & paid factors 
-- paid & checking & notPaid badge upside of factor DONE
---- ServiceManage
-- add IncreaseTraffic page in host DONE
-- redesign theme picker semi-DONE

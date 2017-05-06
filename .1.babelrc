@@ -1,0 +1,61 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "node": "current",
+        "browsers": ["last 2 versions"],
+        "chrome": 52,
+        "edge": 12,
+        "firefox": 45,
+        "safari": 8,
+        "ie": 10
+      }
+    }],
+    "react", 
+    "stage-0"
+  ],
+  "passPerPreset": true,
+	"presets": [
+		{
+      "plugins": [["transform-runtime", {
+        "polyfill": true,
+        "regenerator": true
+      }]]
+    },
+		{
+			"passPerPreset": false,
+			"presets": [
+        ["env", {
+          "modules": false,
+          "targets": {
+            "node": "current",
+            "browsers": ["last 2 versions"],
+            "chrome": 52,
+            "edge": 12,
+            "firefox": 45,
+            "safari": 8,
+            "ie": 10
+          }
+       }],
+       "react", 
+        "stage-0"
+      ]
+		}
+	],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-regenerator",
+   ],
+  "env": {
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-inline-elements"
+      ]
+    }
+  }
+}
