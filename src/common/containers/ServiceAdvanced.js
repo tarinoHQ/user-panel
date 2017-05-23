@@ -9,6 +9,7 @@ import SectionTitle from '../components/SectionTitle';
 import MessageBox from '../components/MessageBox';
 import ComingSoon from '../components/ComingSoon';
 import HelpBtn from '../components/HelpBtn';
+import SshBox from '../components/SshBox';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import Card from '../components/Card';
@@ -31,6 +32,8 @@ class ServiceAdvanced extends Component {
           title="امکانات حرفه‌ای"
           subtitle="امکاناتی که باعث امنیت و سرعت بیشتر سایت شما می‌شوند"
         />
+
+        {/*<SshBox></SshBox>*/}
 
         <ComingSoon>
 
@@ -59,6 +62,7 @@ class ServiceAdvanced extends Component {
           <p>نام‌سرور اختصاصی مزایای بسیاری دارد. پس همین حالا یک DNS اختصاصی سفارش دهید.</p>
 
         </ComingSoon>
+
 
       </div>
     );

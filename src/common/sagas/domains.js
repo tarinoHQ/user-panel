@@ -128,7 +128,7 @@ export function* updateDomainDns() {
       requestStatus = status;
       if (isTokenExpired(status)) yield put(tokenExpiredAction());
       if (status > 1) throw new Error(msg);
-      yield put(actions.MdDnsSaveSucceed(list, yearPlans));
+      yield put(actions.MdDnsSaveSucceed());
     } catch (e) {
       console.log('Md Dns Save error:', e);
       yield put(actions.MdDnsSaveFailed(requestStatus, e));

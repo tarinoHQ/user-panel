@@ -67,7 +67,7 @@ class DomainDns extends Component {
   }
 
   _saveClicked() {
-    this.props.requestMdDnsSave(this.props.routeParams.id);
+    this.props.requestMdDnsSave(this.props.params.id);
   }
 
   render() {
@@ -107,7 +107,7 @@ class DomainDns extends Component {
           onClick={this._saveClicked}>
           ثبت اطلاعات
         </Button>
-        {!!MdDnsSaveError &&
+        {MdDnsSaveError &&
           <IconText
             style={{ display: 'inline', marginRight: '8px' }}
             color="warning"

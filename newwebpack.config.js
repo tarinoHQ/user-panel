@@ -504,6 +504,8 @@ module.exports = (env = {}) => {
           contentBase: resolve(__dirname, 'dist'),
           // match the output path
 
+          historyApiFallback: true,
+
           publicPath: '/',
           // match the output `publicPath`
 
