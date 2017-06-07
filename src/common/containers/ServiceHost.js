@@ -320,7 +320,35 @@ class ChangePassword extends Component {
   }
 
   _submitClicked() {
-    this.props.requestMsChangePassword(this.orderId);
+    if((this.props.password || '').length < 5) {
+      window && alert('باید بیشتراز ۵ تا کارکتر باشه.');
+    } else {
+      console.log("orderId:", this.props.orderId);
+      this.props.requestMsChangePassword(this.props.orderId);
+    }
+  }
+
+  renderError(status) {
+    switch (status) {
+      case 33:
+        return (
+          <IconText
+            style={{ display: 'inline', marginRight: '8px' }}
+            color="warning"
+            iconClass="icon-attention">
+            راحت حدس زده‌میشه. متنوع‌ترش کن.
+          </IconText>
+        );
+      default:
+        return (
+          <IconText
+            style={{ display: 'inline', marginRight: '8px' }}
+            color="warning"
+            iconClass="icon-attention">
+            اوه، دوباره تلاش کنید.
+          </IconText>
+        );
+    }
   }
 
   render() {
@@ -355,12 +383,7 @@ class ChangePassword extends Component {
                 تغییر کلمه‌عبور
               </Button>
               {!!error &&
-                <IconText
-                  style={{ display: 'inline', marginRight: '8px' }}
-                  color="warning"
-                  iconClass="icon-attention">
-                  اوه، دوباره تلاش کنید.
-                </IconText>
+                this.renderError(status)
               }
               {status === 1 &&
                 <IconText
