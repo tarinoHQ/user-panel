@@ -320,7 +320,7 @@ class ChangePassword extends Component {
   }
 
   _submitClicked() {
-    this.props.requestMsChangePassword();
+    this.props.requestMsChangePassword(this.orderId);
   }
 
   render() {
