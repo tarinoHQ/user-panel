@@ -1,3 +1,4 @@
+
 import React, { Component, PropTypes } from 'react';
 import provinces from '../data/provinces.json';
 import { connect } from 'react-redux';
@@ -79,6 +80,10 @@ class Profile extends Component {
 
   state = {
     showPassword: false
+  }
+
+  componentDidMount() {
+    
   }
 
   _fieldChanged(actionCreator, e) {
